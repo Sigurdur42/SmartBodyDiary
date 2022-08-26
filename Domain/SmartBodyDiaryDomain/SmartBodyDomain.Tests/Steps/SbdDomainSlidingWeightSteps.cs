@@ -5,13 +5,13 @@ using SmartBodyDiaryDomain;
 namespace SmartBodyDomain.Tests.Steps;
 
 [Binding]
-public class SbdDomainAverageWeightSteps
+public class SbdDomainSlidingWeightSteps
 {
     private List<DiaryWeight> _availableWeights = new();
     private SbdAverageWeightService? _averageWeightService = new();
     private Exception? _lastException;
 
-    [Given(@"the average weight is calculated")]
+    [Given(@"the sliding weight is calculated")]
     public void GivenTheAverageWeightIsCalculated()
     {
         try
@@ -35,7 +35,7 @@ public class SbdDomainAverageWeightSteps
     public void GivenTheseWeightRecordsAreAvailable(IEnumerable<DiaryWeight> existingData)
         => _availableWeights = existingData.ToList();
 
-    [Then(@"The average weight for '(.*)' is '(.*)'")]
+    [Then(@"The sliding weight for '(.*)' is '(.*)'")]
     public void ThenTheAverageWeightForIs(DateOnly date, decimal averageWeight)
     {
         var foundWeight = _averageWeightService!.GetWeight(date);

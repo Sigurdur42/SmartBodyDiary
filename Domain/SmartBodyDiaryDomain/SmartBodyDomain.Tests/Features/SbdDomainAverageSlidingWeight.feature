@@ -1,4 +1,4 @@
-﻿Feature: Verify the calculation of average weight data
+﻿Feature: Verify the calculation of average sliding weight data
 
     Background:
         Given SbdAverageWeightService exists
@@ -161,9 +161,16 @@
     Scenario: Calling calculate without weight data
         Given These weight records are available
           | Day | Weight |
-        Given the average weight is calculated
+        Given the sliding weight is calculated
         Then No weight calculation exception occurred               
 
+    Scenario: Calling calculate with a single weight record
+        Given These weight records are available
+          | Day        | Weight |
+          | 2021-06-10 | 80.8   |
+        Given the sliding weight is calculated
+        Then The sliding weight for '10.06.2021' is '80.8'               
+        
     Scenario: Verify the average weight on a given day
-        Given the average weight is calculated        
-        Then The average weight for '09.06.2021' is '81.30'
+        Given the sliding weight is calculated        
+        Then The sliding weight for '09.06.2021' is '81.30'
