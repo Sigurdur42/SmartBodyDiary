@@ -7,15 +7,16 @@ using TechTalk.SpecFlow.Assist;
 namespace SmartBodyDomain.Tests.Steps;
 
 [Binding]
-public class SbdDomainServiceSteps
+public class SbdDomainSteps
 {
     private SbdRepository? memoryRepository;
-    private SbdDomainService? service;
+    private SbdDomainService? _service;
+    
 
     [Then(@"The weight of '(.*)' is '(.*)'")]
     public void ThenTheWeightOfIs(DateOnly date, decimal weight)
     {
-        var foundWeight = service!.GetWeight(date);
+        var foundWeight = _service!.GetWeight(date);
         foundWeight.Should().Be(weight);
     }
 
@@ -31,7 +32,7 @@ public class SbdDomainServiceSteps
     public void GivenSbdDomainServiceIsInitializedWithInMemoryRepository()
     {
         memoryRepository = new SbdRepository();
-        service = new SbdDomainService(memoryRepository);
+        _service = new SbdDomainService(memoryRepository);
     }
 
     [Then(@"The daily weight '(.*)' is updated on '(.*)'")]
@@ -40,28 +41,29 @@ public class SbdDomainServiceSteps
     [When(@"The daily weight '(.*)' is added on '(.*)'")]
     public void WhenTheDailyWeightIsAddedOn(decimal weight, DateOnly date)
     {
-        service!.SetWeight(date, weight);
+        _service!.SetWeight(date, weight);
     }
 
+    [Given(@"These weight records already exist")]
     [When(@"These weight records already exist")]
     public void WhenTheseWeightRecordsAlreadyExist(IEnumerable<DiaryWeight> existingData)
     {
         foreach (var row in existingData)
         {
-            service!.SetWeight(row.Day, row.Weight);
+            _service!.SetWeight(row.Day, row.Weight);
         }
     }
 
     [When(@"the weight for '(.*)' is removed")]
     public void WhenTheWeightForIsRemoved(string dayAsString)
     {
-        service!.RemoveWeight(dayAsString.ToDateOnlyDE());
+        _service!.RemoveWeight(dayAsString.ToDateOnlyDE());
     }
 
     [Then(@"GetAllWeightData returns this")]
     public void ThenGetAllWeightDataReturnsThis(IEnumerable<DiaryWeight> expected)
     {
-        var allData = service!.GetAllWeightData().ToDictionary(_ => _.Day);
+        var allData = _service!.GetAllWeightData().ToDictionary(_ => _.Day);
 
         allData.Count.Should().Be(expected.Count(), because: "Both collections should have the same amount of records");
         foreach (var row in expected)
@@ -76,4 +78,6 @@ public class SbdDomainServiceSteps
             }
         }
     }
+
+
 }

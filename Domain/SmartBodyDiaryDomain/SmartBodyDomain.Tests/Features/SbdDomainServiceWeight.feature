@@ -33,7 +33,7 @@ Feature: Tests the weight related public interface of SbdDomainService
         Given SbdDomainService is initialized with in-memory repository
         When These weight records already exist
           | Day        | Weight |
-          | 2022/08/25 | 83.00  |
+          | 25.08.2022 | 83.00  |
           | 26.08.2022 | 82.00  |
           | 27.08.2022 | 85.00  |
         And the weight for '26.08.2022' is removed
