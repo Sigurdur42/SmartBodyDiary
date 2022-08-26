@@ -1,7 +1,7 @@
 ﻿Feature: Verify the calculation of average sliding weight data
 
     Background:
-        Given SbdAverageWeightService exists
+        Given The average sliding calculator is used
         And These weight records are available
           | Day        | Weight |
           | 2020-08-25 | 87.5   |

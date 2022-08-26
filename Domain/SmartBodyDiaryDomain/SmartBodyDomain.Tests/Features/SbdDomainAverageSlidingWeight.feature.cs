@@ -78,7 +78,7 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     #line hidden
 #line 4
-        testRunner.Given("SbdAverageWeightService exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("The average sliding calculator is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Day",

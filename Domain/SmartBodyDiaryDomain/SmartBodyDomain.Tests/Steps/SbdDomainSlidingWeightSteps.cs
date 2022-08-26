@@ -25,7 +25,7 @@ public class SbdDomainSlidingWeightSteps
         }
     }
 
-    [Given(@"SbdAverageWeightService exists")]
+    [Given(@"The average sliding calculator is used")]
     public void GivenSbdAverageWeightServiceExists()
     {
         _averageWeightService = new();
