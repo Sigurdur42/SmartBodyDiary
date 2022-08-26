@@ -2,18 +2,21 @@
 
 public class SbdDomainService
 {
-    private readonly SbdMemoryRepository _memoryRepository;
+    private readonly SbdRepository _repository;
 
-    public SbdDomainService(SbdMemoryRepository memoryRepository)
+    public SbdDomainService(SbdRepository repository)
     {
-        _memoryRepository = memoryRepository;
+        _repository = repository;
     }
 
     public void SetWeight(DateOnly date, decimal weight)
     {
-        _memoryRepository.SetWeight(date, weight);
+        _repository.SetWeight(date, weight);
     }
 
     public decimal? GetWeight(DateOnly date)
-        => _memoryRepository.GetWeight(date);
+        => _repository.GetWeight(date);
+
+    public void RemoveWeight(DateOnly date)
+        => _repository.RemoveWeight(date);
 }
