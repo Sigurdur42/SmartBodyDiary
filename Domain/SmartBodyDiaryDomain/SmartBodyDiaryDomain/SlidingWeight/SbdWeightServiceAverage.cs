@@ -2,43 +2,19 @@
 
 namespace SmartBodyDiaryDomain;
 
-internal class SbdWeightServiceAverage : ISbdWeightService
+internal class SbdWeightServiceAverage : SbdWeightServiceBase
 {
-    private readonly SlidingWeightRepository _slidingWeightRepository;
-
-    public SbdWeightServiceAverage(SlidingWeightRepository slidingWeightRepository)
+    public SbdWeightServiceAverage(SlidingWeightRepository slidingWeightRepository) 
+        : base(slidingWeightRepository)
     {
-        _slidingWeightRepository = slidingWeightRepository;
     }
 
-    public void Calculate(DiaryWeight[] weightData)
+    protected override decimal CalculateSingleValue(List<decimal> singleValues)
     {
-        _slidingWeightRepository.Clear();
+        var divider = singleValues.Count;
+        var total = singleValues.Sum();
 
-        // TODO: maxValues needs a useful logic
-        var maxValues = 7;
-
-        var sortedWeightData = weightData.OrderBy(_ => _.Day).ToArray();
-        var singleValues = new List<decimal>();
-
-        foreach (var item in sortedWeightData.Select(_ => new SlidingWeight(_.Day, _.Weight)))
-        {
-            singleValues.Add(item.Weight);
-            while (singleValues.Count > maxValues)
-            {
-                singleValues.RemoveAt(0);
-            }
-
-            var divider = singleValues.Count;
-            var total = singleValues.Sum();
-
-            var calculatedWeight = total / divider;
-            item.Sliding = Math.Round(calculatedWeight, 2, MidpointRounding.AwayFromZero);
-
-            _slidingWeightRepository.AddOrUpdate(item);
-        }
+        var calculatedWeight = total / divider;
+        return calculatedWeight;
     }
-
-    public SlidingWeight? GetWeight(DateOnly date)
-        => _slidingWeightRepository.GetWeight(date);
 }

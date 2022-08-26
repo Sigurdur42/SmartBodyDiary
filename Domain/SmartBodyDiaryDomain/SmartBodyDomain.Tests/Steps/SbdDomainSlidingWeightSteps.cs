@@ -12,12 +12,12 @@ public class SbdDomainSlidingWeightSteps
     private ISbdWeightService? _averageWeightService;
     private Exception? _lastException;
 
-    [Given(@"the sliding weight is calculated")]
-    public void GivenTheAverageWeightIsCalculated()
+    [Given(@"the sliding weight is calculated considering '(.*)' records")]
+    public void GivenTheAverageWeightIsCalculated(int rangeToConsider)
     {
         try
         {
-            _averageWeightService!.Calculate(_availableWeights.ToArray());
+            _averageWeightService!.Calculate(_availableWeights.ToArray(), rangeToConsider);
         }
         catch (Exception error)
         {

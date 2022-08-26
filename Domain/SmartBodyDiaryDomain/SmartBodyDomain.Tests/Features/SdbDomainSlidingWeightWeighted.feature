@@ -161,16 +161,16 @@
     Scenario: Calling calculate without weight data
         Given These weight records are available
           | Day | Weight |
-        Given the sliding weight is calculated
+        Given the sliding weight is calculated considering '7' records
         Then No weight calculation exception occurred               
 
     Scenario: Calling calculate with a single weight record
         Given These weight records are available
           | Day        | Weight |
           | 2021-06-10 | 80.8   |
-        Given the sliding weight is calculated
+        Given the sliding weight is calculated considering '7' records
         Then The sliding weight for '10.06.2021' is '80.8'               
         
     Scenario: Verify the average weight on a given day
-        Given the sliding weight is calculated        
+        Given the sliding weight is calculated considering '7' records
         Then The sliding weight for '09.06.2021' is '81.26'

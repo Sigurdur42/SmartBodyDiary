@@ -584,7 +584,7 @@ namespace SmartBodyDomain.Tests.Features
         testRunner.Given("These weight records are available", ((string)(null)), table9, "Given ");
 #line hidden
 #line 164
-        testRunner.Given("the sliding weight is calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 165
         testRunner.Then("No weight calculation exception occurred", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -633,7 +633,7 @@ namespace SmartBodyDomain.Tests.Features
         testRunner.Given("These weight records are available", ((string)(null)), table10, "Given ");
 #line hidden
 #line 171
-        testRunner.Given("the sliding weight is calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 172
         testRunner.Then("The sliding weight for \'10.06.2021\' is \'80.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -673,7 +673,7 @@ namespace SmartBodyDomain.Tests.Features
     this.FeatureBackground();
 #line hidden
 #line 175
-        testRunner.Given("the sliding weight is calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 176
         testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.26\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
