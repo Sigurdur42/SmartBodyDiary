@@ -28,7 +28,7 @@
         Then The weight of '26.08.2022' is '90.0'
         And There is only 3 weight record in the repository
 
-    Scenario: Remove a weight
+    Scenario: Remove an existing weight
         Given SbdDomainService is initialized with in-memory repository        
         When These weight records already exist
           | Day        | Weight |
@@ -37,4 +37,14 @@
           | 27.08.2022 | 85.00  |
         And the weight for '26.08.2022' is removed
         And There is only 2 weight record in the repository
+        
+    Scenario: Remove an non existing weight
+        Given SbdDomainService is initialized with in-memory repository        
+        When These weight records already exist
+          | Day        | Weight |
+          | 25.08.2022 | 83.00  |
+          | 26.08.2022 | 82.00  |
+          | 27.08.2022 | 85.00  |
+        And the weight for '01.08.2022' is removed
+        And There is only 3 weight record in the repository
         

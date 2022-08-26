@@ -227,12 +227,12 @@ namespace SmartBodyDomain.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Remove a weight")]
-        public virtual void RemoveAWeight()
+        [NUnit.Framework.DescriptionAttribute("Remove an existing weight")]
+        public virtual void RemoveAnExistingWeight()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove a weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove an existing weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 31
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -276,6 +276,61 @@ namespace SmartBodyDomain.Tests.Features
 #line hidden
 #line 39
         testRunner.And("There is only 2 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Remove an non existing weight")]
+        public virtual void RemoveAnNonExistingWeight()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove an non existing weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 41
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 42
+        testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Weight"});
+                table2.AddRow(new string[] {
+                            "25.08.2022",
+                            "83.00"});
+                table2.AddRow(new string[] {
+                            "26.08.2022",
+                            "82.00"});
+                table2.AddRow(new string[] {
+                            "27.08.2022",
+                            "85.00"});
+#line 43
+        testRunner.When("These weight records already exist", ((string)(null)), table2, "When ");
+#line hidden
+#line 48
+        testRunner.And("the weight for \'01.08.2022\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 49
+        testRunner.And("There is only 3 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
