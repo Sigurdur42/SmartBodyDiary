@@ -2,7 +2,7 @@
 
 namespace SmartBodyDiaryDomain;
 
-public class SbdAverageWeightService
+public class SbdWeightServiceAverage: ISbdWeightService
 {
     private ConcurrentDictionary<DateOnly, AverageWeight> _calculatedData = new();
 
