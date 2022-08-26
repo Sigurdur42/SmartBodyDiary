@@ -2,13 +2,18 @@
 
 namespace SmartBodyDiaryDomain;
 
-public class SbdWeightServiceWeighted : ISbdWeightService
+internal class SbdWeightServiceWeighted : ISbdWeightService
 {
-    private ConcurrentDictionary<DateOnly, AverageWeight> _calculatedData = new();
+    private readonly SlidingWeightRepository _slidingWeightRepository;
+
+    public SbdWeightServiceWeighted(SlidingWeightRepository slidingWeightRepository)
+    {
+        _slidingWeightRepository = slidingWeightRepository;
+    }
 
     public void Calculate(DiaryWeight[] weightData)
     {
-        _calculatedData.Clear();
+        _slidingWeightRepository.Clear();
 
         // TODO: maxValues needs a useful logic
         var maxValues = 7;
@@ -40,17 +45,10 @@ public class SbdWeightServiceWeighted : ISbdWeightService
             var calculatedWeight = total / divider;
             item.Average = Math.Round(calculatedWeight, 2, MidpointRounding.AwayFromZero);
 
-            _calculatedData.AddOrUpdate(item.Day, item, (_, _) => item);
+            _slidingWeightRepository.AddOrUpdate(item);
         }
     }
 
     public AverageWeight? GetWeight(DateOnly date)
-    {
-        if (_calculatedData.TryGetValue(date, out var result))
-        {
-            return result;
-        }
-
-        return null;
-    }
+        => _slidingWeightRepository.GetWeight(date);
 }

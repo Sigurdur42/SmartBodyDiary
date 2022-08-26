@@ -7,6 +7,7 @@ namespace SmartBodyDomain.Tests.Steps;
 [Binding]
 public class SbdDomainSlidingWeightSteps
 {
+    private SlidingWeightRepository _slidingWeightRepository = new();
     private List<DiaryWeight> _availableWeights = new();
     private ISbdWeightService? _averageWeightService;
     private Exception? _lastException;
@@ -28,7 +29,7 @@ public class SbdDomainSlidingWeightSteps
     [Given(@"The average sliding calculator is used")]
     public void GivenSbdAverageWeightServiceExists()
     {
-        _averageWeightService = new SbdWeightServiceAverage();
+        _averageWeightService = new SbdWeightServiceAverage(_slidingWeightRepository);
     }
 
     [Given(@"These weight records are available")]
@@ -51,6 +52,6 @@ public class SbdDomainSlidingWeightSteps
     [Given(@"The weighted sliding calculator is used")]
     public void GivenTheWeightedSlidingCalculatorIsUsed()
     {
-        _averageWeightService = new SbdWeightServiceWeighted();
+        _averageWeightService = new SbdWeightServiceWeighted(_slidingWeightRepository);
     }
 }
