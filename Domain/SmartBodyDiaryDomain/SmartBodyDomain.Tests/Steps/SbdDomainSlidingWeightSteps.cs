@@ -40,7 +40,7 @@ public class SbdDomainSlidingWeightSteps
     public void ThenTheAverageWeightForIs(DateOnly date, decimal averageWeight)
     {
         var foundWeight = _averageWeightService!.GetWeight(date);
-        foundWeight?.AverageRounded.Should().Be(averageWeight);
+        foundWeight?.SlidingRounded.Should().Be(averageWeight);
     }
 
     [Then(@"No weight calculation exception occurred")]

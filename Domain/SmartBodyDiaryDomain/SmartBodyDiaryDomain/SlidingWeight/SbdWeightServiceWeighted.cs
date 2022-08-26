@@ -21,7 +21,7 @@ internal class SbdWeightServiceWeighted : ISbdWeightService
         var sortedWeightData = weightData.OrderBy(_ => _.Day).ToArray();
         var singleValues = new List<decimal>();
 
-        foreach (var item in sortedWeightData.Select(_ => new AverageWeight(_.Day, _.Weight)))
+        foreach (var item in sortedWeightData.Select(_ => new SlidingWeight(_.Day, _.Weight)))
         {
             singleValues.Add(item.Weight);
 
@@ -43,12 +43,12 @@ internal class SbdWeightServiceWeighted : ISbdWeightService
             }
 
             var calculatedWeight = total / divider;
-            item.Average = Math.Round(calculatedWeight, 2, MidpointRounding.AwayFromZero);
+            item.Sliding = Math.Round(calculatedWeight, 2, MidpointRounding.AwayFromZero);
 
             _slidingWeightRepository.AddOrUpdate(item);
         }
     }
 
-    public AverageWeight? GetWeight(DateOnly date)
+    public SlidingWeight? GetWeight(DateOnly date)
         => _slidingWeightRepository.GetWeight(date);
 }

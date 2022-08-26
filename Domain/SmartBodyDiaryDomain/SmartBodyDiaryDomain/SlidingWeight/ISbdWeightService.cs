@@ -3,5 +3,5 @@
 public interface ISbdWeightService
 {
     void Calculate(DiaryWeight[] weightData);
-    AverageWeight? GetWeight(DateOnly date);
+    SlidingWeight? GetWeight(DateOnly date);
 }
