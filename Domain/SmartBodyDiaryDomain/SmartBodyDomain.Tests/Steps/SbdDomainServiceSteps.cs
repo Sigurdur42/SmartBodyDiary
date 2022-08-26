@@ -1,29 +1,41 @@
-﻿namespace SmartBodyDomain.Tests.Steps;
+﻿using FluentAssertions;
+using NUnit.Framework;
+using SmartBodyDiaryDomain;
+
+namespace SmartBodyDomain.Tests.Steps;
 
 [Binding]
 public class SbdDomainServiceSteps
 {
-    [Then(@"The weight of (.*) is (.*)")]
-    public void ThenTheWeightOfIs(string p0, decimal p1)
+    private SbdMemoryRepository? memoryRepository;
+    private SbdDomainService? service;
+
+    [Then(@"The weight of '(.*)' is '(.*)'")]
+    public void ThenTheWeightOfIs(string dateAsString, decimal weight)
     {
-        ScenarioContext.StepIsPending();
+        var date = dateAsString.ToDateOnlyDE();
+        var foundWeight = service!.GetWeight(date);
+        foundWeight.Should().Be(weight);
     }
 
     [Then(@"There is only (.*) weight record in the repository")]
-    public void ThenThereIsOnlyWeightRecordInTheRepository(int p0)
+    public void ThenThereIsOnlyWeightRecordInTheRepository(int numberOfRecords)
     {
-        ScenarioContext.StepIsPending();
+        var found = memoryRepository!.GetWeightCount();
+        found.Should().Be(numberOfRecords);
     }
 
     [Given(@"SbdDomainService is initialized with in-memory repository")]
     public void GivenSbdDomainServiceIsInitializedWithInMemoryRepository()
     {
-        ScenarioContext.StepIsPending();
+        memoryRepository = new SbdMemoryRepository();
+        service = new SbdDomainService(memoryRepository);
     }
 
-    [When(@"The daily weight (.*) is added on (.*)")]
-    public void WhenTheDailyWeightIsAddedOn(decimal p0, string p1)
+    [When(@"The daily weight '(.*)' is added on '(.*)'")]
+    public void WhenTheDailyWeightIsAddedOn(decimal weight, string dateAsString)
     {
-        ScenarioContext.StepIsPending();
+        var date = dateAsString.ToDateOnlyDE();
+        service!.SetWeight(date, weight);
     }
 }
