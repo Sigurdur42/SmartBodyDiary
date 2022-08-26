@@ -1,10 +1,8 @@
-﻿using System.Collections.Concurrent;
-
-namespace SmartBodyDiaryDomain;
+﻿namespace SmartBodyDiaryDomain;
 
 internal class SbdWeightServiceAverage : SbdWeightServiceBase
 {
-    public SbdWeightServiceAverage(SlidingWeightRepository slidingWeightRepository) 
+    public SbdWeightServiceAverage(SlidingWeightRepository slidingWeightRepository)
         : base(slidingWeightRepository)
     {
     }

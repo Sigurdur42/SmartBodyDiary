@@ -174,3 +174,9 @@
     Scenario: Verify the average weight on a given day
         Given the sliding weight is calculated considering '7' records
         Then The sliding weight for '09.06.2021' is '81.30'
+        
+    Scenario: Verify the average weight on a given day is correct after multiple calculation calls
+        Given the sliding weight is calculated considering '7' records
+        Then The sliding weight for '09.06.2021' is '81.30'
+        Given the sliding weight is calculated considering '7' records
+        Then The sliding weight for '09.06.2021' is '81.30'

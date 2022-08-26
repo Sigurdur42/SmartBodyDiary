@@ -1,6 +1,4 @@
-﻿using System.Collections.Concurrent;
-
-namespace SmartBodyDiaryDomain;
+﻿namespace SmartBodyDiaryDomain;
 
 internal class SbdWeightServiceWeighted : SbdWeightServiceBase
 {

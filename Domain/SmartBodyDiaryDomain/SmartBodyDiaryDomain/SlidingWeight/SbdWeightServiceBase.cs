@@ -20,18 +20,18 @@ internal abstract class SbdWeightServiceBase : ISbdWeightService
         {
             singleValues.Add(item.Weight);
             while (singleValues.Count > rangeToConsider)
-            {
                 singleValues.RemoveAt(0);
-            }
 
-            item.Sliding = Math.Round((decimal)CalculateSingleValue(singleValues), 6, MidpointRounding.AwayFromZero);
+            item.Sliding = Math.Round(CalculateSingleValue(singleValues), 6, MidpointRounding.AwayFromZero);
 
             _slidingWeightRepository.AddOrUpdate(item);
         }
     }
 
     public SlidingWeight? GetWeight(DateOnly date)
-        => _slidingWeightRepository.GetWeight(date);
+    {
+        return _slidingWeightRepository.GetWeight(date);
+    }
 
     protected abstract decimal CalculateSingleValue(List<decimal> singleValues);
 }

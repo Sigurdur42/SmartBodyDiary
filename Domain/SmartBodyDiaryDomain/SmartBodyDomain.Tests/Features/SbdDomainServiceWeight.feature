@@ -49,6 +49,15 @@ Feature: Tests the weight related public interface of SbdDomainService
         And the weight for '01.08.2022' is removed
         And There is only 3 weight record in the repository
 
+    Scenario: Query an non existing weight
+        Given SbdDomainService is initialized with in-memory repository
+        When These weight records already exist
+          | Day        | Weight |
+          | 25.08.2022 | 83.00  |
+          | 26.08.2022 | 82.00  |
+          | 27.08.2022 | 85.00  |
+        Then The weight of '01.08.2022' does not exist    
+        
     Scenario: Get all weight data
         Given SbdDomainService is initialized with in-memory repository
         When These weight records already exist

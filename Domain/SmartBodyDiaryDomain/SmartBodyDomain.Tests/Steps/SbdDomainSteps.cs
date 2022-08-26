@@ -79,5 +79,10 @@ public class SbdDomainSteps
         }
     }
 
-
+    [Then(@"The weight of '(.*)' does not exist")]
+    public void ThenTheWeightOfDoesNotExist(DateOnly date)
+    {
+        var found = _service!.GetWeight(date);
+        found.Should().BeNull("There hould be no weight for this date");
+    }
 }

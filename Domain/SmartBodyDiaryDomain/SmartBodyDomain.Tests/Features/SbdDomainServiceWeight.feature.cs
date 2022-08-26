@@ -337,12 +337,12 @@ namespace SmartBodyDomain.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Get all weight data")]
-        public virtual void GetAllWeightData()
+        [NUnit.Framework.DescriptionAttribute("Query an non existing weight")]
+        public virtual void QueryAnNonExistingWeight()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get all weight data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Query an non existing weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 52
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -381,6 +381,43 @@ namespace SmartBodyDomain.Tests.Features
 #line 54
         testRunner.When("These weight records already exist", ((string)(null)), table3, "When ");
 #line hidden
+#line 59
+        testRunner.Then("The weight of \'01.08.2022\' does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get all weight data")]
+        public virtual void GetAllWeightData()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get all weight data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 61
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 62
+        testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
@@ -393,8 +430,23 @@ namespace SmartBodyDomain.Tests.Features
                 table4.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
-#line 59
-        testRunner.Then("GetAllWeightData returns this", ((string)(null)), table4, "Then ");
+#line 63
+        testRunner.When("These weight records already exist", ((string)(null)), table4, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Weight"});
+                table5.AddRow(new string[] {
+                            "25.08.2022",
+                            "83.00"});
+                table5.AddRow(new string[] {
+                            "26.08.2022",
+                            "82.00"});
+                table5.AddRow(new string[] {
+                            "27.08.2022",
+                            "85.00"});
+#line 68
+        testRunner.Then("GetAllWeightData returns this", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
