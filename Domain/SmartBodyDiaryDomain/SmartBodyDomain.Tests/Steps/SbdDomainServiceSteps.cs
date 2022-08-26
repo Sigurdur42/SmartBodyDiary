@@ -1,6 +1,8 @@
-﻿using FluentAssertions;
+﻿using System.Globalization;
+using FluentAssertions;
 using NUnit.Framework;
 using SmartBodyDiaryDomain;
+using TechTalk.SpecFlow.Assist;
 
 namespace SmartBodyDomain.Tests.Steps;
 
@@ -11,9 +13,8 @@ public class SbdDomainServiceSteps
     private SbdDomainService? service;
 
     [Then(@"The weight of '(.*)' is '(.*)'")]
-    public void ThenTheWeightOfIs(string dateAsString, decimal weight)
+    public void ThenTheWeightOfIs(DateOnly date, decimal weight)
     {
-        var date = dateAsString.ToDateOnlyDE();
         var foundWeight = service!.GetWeight(date);
         foundWeight.Should().Be(weight);
     }
@@ -37,19 +38,17 @@ public class SbdDomainServiceSteps
     [When(@"The daily weight '(.*)' is updated on '(.*)'")]
     [Then(@"The daily weight '(.*)' is added on '(.*)'")]
     [When(@"The daily weight '(.*)' is added on '(.*)'")]
-    public void WhenTheDailyWeightIsAddedOn(decimal weight, string dateAsString)
+    public void WhenTheDailyWeightIsAddedOn(decimal weight, DateOnly date)
     {
-        var date = dateAsString.ToDateOnlyDE();
         service!.SetWeight(date, weight);
     }
 
     [When(@"These weight records already exist")]
-    public void WhenTheseWeightRecordsAlreadyExist(Table table)
+    public void WhenTheseWeightRecordsAlreadyExist(IEnumerable<DiaryWeight> existingData)
     {
-        foreach (var row in table.Rows)
+        foreach (var row in existingData)
         {
-            var date = row[0].ToDateOnlyDE();
-            service!.SetWeight(date, Decimal.Parse(row[1], StepExtensions.German));
+            service!.SetWeight(row.Day, row.Weight);
         }
     }
 
@@ -57,5 +56,24 @@ public class SbdDomainServiceSteps
     public void WhenTheWeightForIsRemoved(string dayAsString)
     {
         service!.RemoveWeight(dayAsString.ToDateOnlyDE());
+    }
+
+    [Then(@"GetAllWeightData returns this")]
+    public void ThenGetAllWeightDataReturnsThis(IEnumerable<DiaryWeight> expected)
+    {
+        var allData = service!.GetAllWeightData().ToDictionary(_ => _.Day);
+
+        allData.Count.Should().Be(expected.Count(), because: "Both collections should have the same amount of records");
+        foreach (var row in expected)
+        {
+            if (allData.TryGetValue(row.Day, out var found))
+            {
+                found.Weight.Should().Be(row.Weight, because: $"Wrong weight for day {row.Day}");
+            }
+            else
+            {
+                Assert.Fail($"Missing weight for date {row.Day}");
+            }
+        }
     }
 }

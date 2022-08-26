@@ -24,4 +24,12 @@ public class SbdRepository
 
     public void RemoveWeight(DateOnly date)
         => _weights.TryRemove(date, out var _);
+
+    public DiaryWeight[] GetAllWeightData()
+    {
+        return _weights
+            .Select(_ => new DiaryWeight(_.Key, _.Value))
+            .OrderBy(_=>_.Day)
+            .ToArray();
+    }
 }

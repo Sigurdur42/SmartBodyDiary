@@ -19,4 +19,7 @@ public class SbdDomainService
 
     public void RemoveWeight(DateOnly date)
         => _repository.RemoveWeight(date);
+
+    public DiaryWeight[] GetAllWeightData()
+        => _repository.GetAllWeightData();
 }

@@ -35,7 +35,7 @@ namespace SmartBodyDomain.Tests.Features
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Tests the weight related public interface of SbdDomainService", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-us"), "Features", "Tests the weight related public interface of SbdDomainService", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,7 +80,7 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add first daily weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 5
+#line 6
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -100,16 +100,16 @@ namespace SmartBodyDomain.Tests.Features
             else
             {
                 this.ScenarioStart();
-#line 6
+#line 7
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 7
+#line 8
         testRunner.When("The daily weight \'85.8\' is added on \'26.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 8
+#line 9
         testRunner.Then("There is only 1 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 9
+#line 10
         testRunner.And("The weight of \'26.08.2022\' is \'85.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -123,7 +123,7 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add multiple weights", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 11
+#line 12
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -143,31 +143,31 @@ namespace SmartBodyDomain.Tests.Features
             else
             {
                 this.ScenarioStart();
-#line 12
+#line 13
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 13
+#line 14
         testRunner.When("The daily weight \'85.8\' is added on \'26.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 14
+#line 15
         testRunner.Then("There is only 1 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 15
+#line 16
         testRunner.And("The weight of \'26.08.2022\' is \'85.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 17
         testRunner.And("The daily weight \'85.8\' is added on \'25.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 18
         testRunner.Then("The weight of \'25.08.2022\' is \'85.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 18
+#line 19
         testRunner.And("The daily weight \'87.8\' is added on \'24.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 19
+#line 20
         testRunner.Then("The weight of \'24.08.2022\' is \'87.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 20
+#line 21
         testRunner.Then("There is only 3 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -181,7 +181,7 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update existing weights", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 22
+#line 23
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -201,25 +201,25 @@ namespace SmartBodyDomain.Tests.Features
             else
             {
                 this.ScenarioStart();
-#line 23
+#line 24
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 24
+#line 25
         testRunner.When("The daily weight \'85.8\' is added on \'26.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 25
+#line 26
         testRunner.And("The daily weight \'85.8\' is added on \'25.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 26
+#line 27
         testRunner.And("The daily weight \'88.8\' is added on \'24.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 27
+#line 28
         testRunner.And("The daily weight \'90.0\' is updated on \'26.08.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 28
+#line 29
         testRunner.Then("The weight of \'26.08.2022\' is \'90.0\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 29
+#line 30
         testRunner.And("There is only 3 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -233,7 +233,7 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove an existing weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 31
+#line 32
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -253,14 +253,14 @@ namespace SmartBodyDomain.Tests.Features
             else
             {
                 this.ScenarioStart();
-#line 32
+#line 33
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
                 table1.AddRow(new string[] {
-                            "25.08.2022",
+                            "2022/08/25",
                             "83.00"});
                 table1.AddRow(new string[] {
                             "26.08.2022",
@@ -268,13 +268,13 @@ namespace SmartBodyDomain.Tests.Features
                 table1.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
-#line 33
+#line 34
         testRunner.When("These weight records already exist", ((string)(null)), table1, "When ");
 #line hidden
-#line 38
+#line 39
         testRunner.And("the weight for \'26.08.2022\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 39
+#line 40
         testRunner.And("There is only 2 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -288,7 +288,7 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove an non existing weight", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 41
+#line 42
     this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -308,7 +308,7 @@ namespace SmartBodyDomain.Tests.Features
             else
             {
                 this.ScenarioStart();
-#line 42
+#line 43
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -323,14 +323,78 @@ namespace SmartBodyDomain.Tests.Features
                 table2.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
-#line 43
+#line 44
         testRunner.When("These weight records already exist", ((string)(null)), table2, "When ");
 #line hidden
-#line 48
+#line 49
         testRunner.And("the weight for \'01.08.2022\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 49
+#line 50
         testRunner.And("There is only 3 weight record in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Get all weight data")]
+        public virtual void GetAllWeightData()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Get all weight data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 52
+    this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 53
+        testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Weight"});
+                table3.AddRow(new string[] {
+                            "25.08.2022",
+                            "83.00"});
+                table3.AddRow(new string[] {
+                            "26.08.2022",
+                            "82.00"});
+                table3.AddRow(new string[] {
+                            "27.08.2022",
+                            "85.00"});
+#line 54
+        testRunner.When("These weight records already exist", ((string)(null)), table3, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Weight"});
+                table4.AddRow(new string[] {
+                            "25.08.2022",
+                            "83.00"});
+                table4.AddRow(new string[] {
+                            "26.08.2022",
+                            "82.00"});
+                table4.AddRow(new string[] {
+                            "27.08.2022",
+                            "85.00"});
+#line 59
+        testRunner.Then("GetAllWeightData returns this", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
