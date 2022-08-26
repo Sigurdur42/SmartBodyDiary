@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using Microsoft.VisualBasic;
 using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain.Tests.Steps;
@@ -7,10 +6,10 @@ namespace SmartBodyDomain.Tests.Steps;
 [Binding]
 public class SbdDomainSlidingWeightSteps
 {
-    private SlidingWeightRepository _slidingWeightRepository = new();
     private List<DiaryWeight> _availableWeights = new();
     private ISbdWeightService? _averageWeightService;
     private Exception? _lastException;
+    private readonly SlidingWeightRepository _slidingWeightRepository = new();
 
     [Given(@"the sliding weight is calculated considering '(.*)' records")]
     public void GivenTheAverageWeightIsCalculated(int rangeToConsider)
@@ -34,7 +33,9 @@ public class SbdDomainSlidingWeightSteps
 
     [Given(@"These weight records are available")]
     public void GivenTheseWeightRecordsAreAvailable(IEnumerable<DiaryWeight> existingData)
-        => _availableWeights = existingData.ToList();
+    {
+        _availableWeights = existingData.ToList();
+    }
 
     [Then(@"The sliding weight for '(.*)' is '(.*)'")]
     public void ThenTheAverageWeightForIs(DateOnly date, decimal averageWeight)

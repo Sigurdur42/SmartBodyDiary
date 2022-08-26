@@ -15,11 +15,17 @@ public class SbdDomainService
     }
 
     public decimal? GetWeight(DateOnly date)
-        => _repository.GetWeight(date);
+    {
+        return _repository.GetWeight(date);
+    }
 
     public void RemoveWeight(DateOnly date)
-        => _repository.RemoveWeight(date);
+    {
+        _repository.RemoveWeight(date);
+    }
 
     public DiaryWeight[] GetAllWeightData()
-        => _repository.GetAllWeightData();
+    {
+        return _repository.GetAllWeightData();
+    }
 }
