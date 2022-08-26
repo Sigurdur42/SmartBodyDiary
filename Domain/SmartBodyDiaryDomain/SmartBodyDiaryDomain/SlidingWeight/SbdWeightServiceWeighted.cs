@@ -1,5 +1,9 @@
 ﻿namespace SmartBodyDiaryDomain;
 
+/// <summary>
+/// This class implements the weighted sliding weight algorythm.
+/// <br/> See https://tradistats.com/gleitender-gewichteter-durchschnitt/ for algorythm description.
+/// </summary>
 internal class SbdWeightServiceWeighted : SbdWeightServiceBase
 {
     public SbdWeightServiceWeighted(SlidingWeightRepository slidingWeightRepository)
@@ -9,7 +13,6 @@ internal class SbdWeightServiceWeighted : SbdWeightServiceBase
 
     protected override decimal CalculateSingleValue(List<decimal> singleValues)
     {
-        // Now calculate weighted average (See https://tradistats.com/gleitender-gewichteter-durchschnitt/)
         var index = 1;
 
         var total = 0m;

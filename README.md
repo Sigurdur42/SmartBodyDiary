@@ -6,3 +6,6 @@
 - Persistence
 - Challenges
 - read test data from Fit and lift
+
+
+- factory to create all services?
