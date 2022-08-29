@@ -1,4 +1,4 @@
-﻿Feature: Verifies the functionality of SdbDateBasedRepository
+﻿Feature: SdbDateBasedRepository - Verifies the functionality
 
     Background:
         Given The date based repository has been created for repo testing

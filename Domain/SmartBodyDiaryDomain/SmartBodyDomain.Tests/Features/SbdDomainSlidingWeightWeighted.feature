@@ -1,4 +1,4 @@
-﻿Feature: Verify the calculation of weighted sliding weight data
+﻿Feature: SlidingWeight - Calculates weighted sliding weight data
 
     Background:
         Given The weighted sliding calculator is used

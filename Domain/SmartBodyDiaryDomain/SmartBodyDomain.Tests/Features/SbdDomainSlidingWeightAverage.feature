@@ -1,4 +1,4 @@
-﻿Feature: Verify the calculation of average sliding weight data
+﻿Feature: SlidingWeight - Calculates average sliding weight data
 
     Background:
         Given The average sliding calculator is used

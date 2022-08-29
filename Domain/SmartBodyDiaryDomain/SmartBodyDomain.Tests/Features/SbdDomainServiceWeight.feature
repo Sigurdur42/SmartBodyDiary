@@ -1,5 +1,5 @@
 ﻿#language: en-us
-Feature: Tests the weight related public interface of SbdDomainService
+Feature: SdbDomainService - Tests the weight related public interface of SbdDomainService
 
 # Background: SbdDomainService is initialized with in-memory repository
 

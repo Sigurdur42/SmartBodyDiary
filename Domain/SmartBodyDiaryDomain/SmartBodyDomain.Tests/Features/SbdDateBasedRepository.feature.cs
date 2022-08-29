@@ -20,22 +20,22 @@ namespace SmartBodyDomain.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Verifies the functionality of SdbDateBasedRepository")]
-    public partial class VerifiesTheFunctionalityOfSdbDateBasedRepositoryFeature
+    [NUnit.Framework.DescriptionAttribute("SdbDateBasedRepository - Verifies the functionality")]
+    public partial class SdbDateBasedRepository_VerifiesTheFunctionalityFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SdbDateBasedRepository.feature"
+#line 1 "SbdDateBasedRepository.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Verifies the functionality of SdbDateBasedRepository", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SdbDateBasedRepository - Verifies the functionality", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -155,86 +155,86 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-25",
                             "87.5"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-26",
                             "87.9"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-27",
                             "87.7"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-28",
                             "87.6"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-29",
                             "87.2"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-30",
                             "87.4"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-08-31",
                             "87.5"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-01",
                             "88.7"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-02",
                             "87.7"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-03",
                             "87.2"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-04",
                             "87.0"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-05",
                             "86.4"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-06",
                             "86.3"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-07",
                             "86.9"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-08",
                             "86.6"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-09",
                             "86.5"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-10",
                             "86.6"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-11",
                             "87.1"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-12",
                             "86.6"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-13",
                             "86.8"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-14",
                             "88.0"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-15",
                             "86.4"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-16",
                             "86.0"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-17",
                             "86.4"});
-                table9.AddRow(new string[] {
+                table1.AddRow(new string[] {
                             "2020-09-18",
                             "85.9"});
 #line 12
-        testRunner.When("These repository records already exist", ((string)(null)), table9, "When ");
+        testRunner.When("These repository records already exist", ((string)(null)), table1, "When ");
 #line hidden
 #line 39
         testRunner.Then("the repository must have \'25\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -285,17 +285,17 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "2020-09-17",
                             "86.4"});
-                table10.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "2020-09-18",
                             "85.9"});
 #line 46
-        testRunner.When("These repository records already exist", ((string)(null)), table10, "When ");
+        testRunner.When("These repository records already exist", ((string)(null)), table2, "When ");
 #line hidden
 #line 50
         testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -346,17 +346,17 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "2020-09-17",
                             "86.4"});
-                table11.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "2020-09-18",
                             "85.9"});
 #line 57
-        testRunner.When("These repository records already exist", ((string)(null)), table11, "When ");
+        testRunner.When("These repository records already exist", ((string)(null)), table3, "When ");
 #line hidden
 #line 61
         testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -407,17 +407,17 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table12.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "2020-09-17",
                             "86.4"});
-                table12.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "2020-09-18",
                             "85.9"});
 #line 68
-        testRunner.When("These repository records already exist", ((string)(null)), table12, "When ");
+        testRunner.When("These repository records already exist", ((string)(null)), table4, "When ");
 #line hidden
 #line 72
         testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -465,17 +465,17 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table13.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "2020-09-17",
                             "86.4"});
-                table13.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "2020-09-18",
                             "85.9"});
 #line 78
-        testRunner.When("These repository records already exist", ((string)(null)), table13, "When ");
+        testRunner.When("These repository records already exist", ((string)(null)), table5, "When ");
 #line hidden
 #line 82
         testRunner.Then("GetAllData returns \'2\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
