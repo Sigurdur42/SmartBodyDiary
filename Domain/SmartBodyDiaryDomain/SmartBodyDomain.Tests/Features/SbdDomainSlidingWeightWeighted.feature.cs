@@ -80,470 +80,470 @@ namespace SmartBodyDomain.Tests.Features
 #line 4
         testRunner.Given("The weighted sliding calculator is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-            TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+            TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                         "Day",
                         "Weight"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-25",
                         "87.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-26",
                         "87.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-27",
                         "87.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-28",
                         "87.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-29",
                         "87.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-30",
                         "87.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-08-31",
                         "87.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-01",
                         "88.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-02",
                         "87.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-03",
                         "87.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-04",
                         "87.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-05",
                         "86.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-06",
                         "86.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-07",
                         "86.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-08",
                         "86.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-09",
                         "86.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-10",
                         "86.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-11",
                         "87.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-12",
                         "86.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-13",
                         "86.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-14",
                         "88.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-15",
                         "86.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-16",
                         "86.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-17",
                         "86.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-18",
                         "85.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-19",
                         "86.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-20",
                         "86.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-21",
                         "85.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-22",
                         "86.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-23",
                         "86.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-24",
                         "86.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-25",
                         "85.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-28",
                         "85.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-09-30",
                         "85.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-01",
                         "85.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-02",
                         "84.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-03",
                         "84.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-05",
                         "85.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-06",
                         "85.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-07",
                         "85.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-08",
                         "85.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-09",
                         "85.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-10",
                         "84.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-11",
                         "84.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-12",
                         "85.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-13",
                         "85.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-15",
                         "84.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-16",
                         "85.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-17",
                         "84.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-18",
                         "84.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-20",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-21",
                         "83.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-22",
                         "84.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-23",
                         "84.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-25",
                         "83.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-26",
                         "83.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-27",
                         "83.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-28",
                         "83.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-29",
                         "84.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-10-30",
                         "84.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-01",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-03",
                         "83.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-04",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-05",
                         "83.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-06",
                         "83.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-07",
                         "83.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-08",
                         "83.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-09",
                         "83.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-10",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-12",
                         "82.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-13",
                         "82.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-14",
                         "83.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-16",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-17",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-18",
                         "82.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-19",
                         "82.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-20",
                         "82.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-22",
                         "83.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-23",
                         "82.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-24",
                         "83.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-26",
                         "82.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-27",
                         "82.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-28",
                         "82.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-11-29",
                         "83.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-01",
                         "83.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-02",
                         "82.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-04",
                         "83.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-07",
                         "83.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-09",
                         "83.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-10",
                         "83.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-11",
                         "83.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-12",
                         "84.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-15",
                         "83.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-18",
                         "84.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-27",
                         "85.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2020-12-29",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-01",
                         "85.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-02",
                         "85.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-03",
                         "84.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-04",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-05",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-06",
                         "84.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-08",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-09",
                         "84.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-10",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-11",
                         "83.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-12",
                         "83.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-13",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-14",
                         "84.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-18",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-25",
                         "83.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-01-29",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-02-09",
                         "85.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-02-10",
                         "84.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-04-24",
                         "83.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-04-26",
                         "84.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-04-27",
                         "83.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-04-30",
                         "83.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-01",
                         "83.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-03",
                         "83.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-05",
                         "82.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-06",
                         "83.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-07",
                         "83.7"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-08",
                         "83.4"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-10",
                         "82.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-12",
                         "82.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-13",
                         "82.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-14",
                         "83.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-15",
                         "82.6"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-16",
                         "82.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-17",
                         "82.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-18",
                         "82.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-19",
                         "82.5"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-20",
                         "82.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-22",
                         "81.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-23",
                         "82.0"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-24",
                         "82.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-25",
                         "82.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-26",
                         "82.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-27",
                         "81.9"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-28",
                         "82.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-30",
                         "80.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-05-31",
                         "81.3"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-01",
                         "81.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-02",
                         "81.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-03",
                         "81.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-04",
                         "81.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-05",
                         "81.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-06",
                         "81.2"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-07",
                         "81.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-08",
                         "80.8"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-09",
                         "81.1"});
-            table14.AddRow(new string[] {
+            table15.AddRow(new string[] {
                         "2021-06-10",
                         "80.8"});
 #line 5
-        testRunner.And("These weight records are available", ((string)(null)), table14, "And ");
+        testRunner.And("These weight records are available", ((string)(null)), table15, "And ");
 #line hidden
         }
         
@@ -577,11 +577,11 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
 #line 162
-        testRunner.Given("These weight records are available", ((string)(null)), table15, "Given ");
+        testRunner.Given("These weight records are available", ((string)(null)), table16, "Given ");
 #line hidden
 #line 164
         testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
@@ -623,14 +623,14 @@ namespace SmartBodyDomain.Tests.Features
 #line 3
     this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table16.AddRow(new string[] {
+                table17.AddRow(new string[] {
                             "2021-06-10",
                             "80.8"});
 #line 168
-        testRunner.Given("These weight records are available", ((string)(null)), table16, "Given ");
+        testRunner.Given("These weight records are available", ((string)(null)), table17, "Given ");
 #line hidden
 #line 171
         testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");

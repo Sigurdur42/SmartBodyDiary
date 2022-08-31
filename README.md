@@ -1,7 +1,6 @@
 # SmartBodyDiary
 
 # TODO Domain
-- Body measurement data
 - Challenges
 - Persistence
 - Last Week stats

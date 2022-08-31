@@ -18,7 +18,7 @@ public class SdbDateBasedRepositorySteps
     [When(@"the value '(.*)' is added on '(.*)'")]
     public void WhenTheValueIsAddedOn(decimal value, DateOnly date)
     {
-        _repository.AddOrUpdate(date, new DiaryWeight(date, value));
+        _repository.AddOrUpdate(new DiaryWeight(date, value));
     }
 
     [Then(@"the repository must have '(.*)' record")]

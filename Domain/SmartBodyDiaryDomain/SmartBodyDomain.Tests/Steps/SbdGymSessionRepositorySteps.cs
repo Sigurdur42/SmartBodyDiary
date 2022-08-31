@@ -29,7 +29,7 @@ public class SbdGymSessionRepositorySteps
         {
             Progress = status
         };
-        _repository.AddOrUpdate(day, gym);
+        _repository.AddOrUpdate(gym);
     }
 
     [Then(@"The gym status on '(.*)' is '(.*)'")]
