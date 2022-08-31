@@ -40,17 +40,8 @@ public class SbdBodyMeasurementRepositorySteps
 
     private BodyMeasurement CreateFromTable(DateOnly day, Table table)
     {
-        var type = typeof(BodyMeasurement);
         var result = new BodyMeasurement(day);
-        foreach (var row in table.Rows)
-        {
-            var value = decimal.Parse(row[1], StepExtensions.English);
-            var propertyName = row[0];
-            var property = type.GetProperty(propertyName);
-            property.Should().NotBeNull("Cannot find property " + propertyName);
-            property?.SetValue(result, value);
-        }
-
+        result.FillFromReflection(table);
         return result;
     }
 }

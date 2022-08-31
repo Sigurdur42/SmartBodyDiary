@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using FluentAssertions;
 using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain.Tests.Steps;

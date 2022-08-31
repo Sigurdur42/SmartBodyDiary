@@ -1,4 +1,6 @@
 ﻿using System.Globalization;
+using FluentAssertions;
+using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain.Tests.Steps;
 
@@ -10,5 +12,38 @@ public static class StepExtensions
     public static DateOnly ToDateOnlyDE(this string input)
     {
         return DateOnly.Parse(input, German);
+    }
+
+    public static void FillFromReflection(this IDateRecord record, Table table)
+    {
+        var type = record.GetType();
+        foreach (var row in table.Rows)
+        {
+            object? value = null;
+
+            var propertyName = row[0];
+            var property = type.GetProperty(propertyName);
+
+            var propertyType = property?.PropertyType.Name.ToLowerInvariant();
+            switch (propertyType)
+            {
+                case "string":
+                    value = row[1];
+                    break;
+                case "decimal":
+                    value = decimal.Parse(row[1], StepExtensions.English);
+                    break;
+                
+                case "dateonly":
+                    value = row[1].ToDateOnlyDE();
+                    break;
+
+                default:
+                    throw new InvalidCastException($"unexpected type '{propertyType}'");
+            }
+
+            property.Should().NotBeNull($"Cannot find property {propertyName} on type {type.FullName}");
+            property?.SetValue(record, value);
+        }
     }
 }
