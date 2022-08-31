@@ -1,7 +1,6 @@
 # SmartBodyDiary
 
 # TODO Domain
-- Gym Sessions
 - Body measurement data
 - Challenges
 - Persistence

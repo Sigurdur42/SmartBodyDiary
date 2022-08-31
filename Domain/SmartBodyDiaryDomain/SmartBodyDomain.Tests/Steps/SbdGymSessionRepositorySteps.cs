@@ -1,16 +1,17 @@
 ﻿using FluentAssertions;
+using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain.Tests;
 
 [Binding]
 public class SbdGymSessionRepositorySteps
 {
-    private SbdGymSessionRepository _repository = new(); 
+    private SdbDateBasedRepository<GymSession> _repository = new(); 
     
     [Given(@"An empty gym session repository is initialized")]
     public void GivenAnEmptyGymSessionRepositoryIsInitialized()
     {
-        _repository = new SbdGymSessionRepository();
+        _repository = new SdbDateBasedRepository<GymSession>();
     }
 
     [Then(@"Exactly '(.*)' gym session\(s\) is in the repository")]
