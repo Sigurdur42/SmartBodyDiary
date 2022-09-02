@@ -17,10 +17,10 @@ public class GymSession : IDateRecord
 
     public GymSession(DateOnly day)
     {
-        day = Day;
+        Day = day;
     }
 
-    public DateOnly Day { get; }
+    public DateOnly Day { get; init; }
 
     public GymProgress Progress { get; set; }
 }

@@ -9,6 +9,8 @@ public static class StepExtensions
     public static readonly CultureInfo German = new("de-DE");
     public static readonly CultureInfo English = new("en-US");
 
+    private static readonly Dictionary<string, GymProgress> _progressValues = Enum.GetValues<GymProgress>().ToDictionary(_ => _.ToString().ToLowerInvariant());
+
     public static DateOnly ToDateOnlyDE(this string input)
     {
         return DateOnly.Parse(input, German);
@@ -33,7 +35,7 @@ public static class StepExtensions
                 case "decimal":
                     value = decimal.Parse(row[1], StepExtensions.English);
                     break;
-                
+
                 case "dateonly":
                     value = row[1].ToDateOnlyDE();
                     break;
@@ -46,4 +48,7 @@ public static class StepExtensions
             property?.SetValue(record, value);
         }
     }
+
+    public static GymProgress ToGymProgress(this string input)
+        => _progressValues[input.ToLowerInvariant()];
 }

@@ -74,14 +74,14 @@ namespace SmartBodyDomain.Tests.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("DiaryWeight - JSON can be written and read again")]
-        public virtual void DiaryWeight_JSONCanBeWrittenAndReadAgain()
+        [NUnit.Framework.DescriptionAttribute("JSON can be written and read again")]
+        public virtual void JSONCanBeWrittenAndReadAgain()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("DiaryWeight - JSON can be written and read again", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("JSON can be written and read again", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 3
-this.ScenarioInitialize(scenarioInfo);
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 4
- testRunner.Given("The DiaryWeight JSON persistence is create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("The DiaryWeight JSON persistence is create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table20 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -116,16 +116,34 @@ this.ScenarioInitialize(scenarioInfo);
                             "27.08.2022",
                             "85.00"});
 #line 5
- testRunner.When("These DiaryWeight records shall be used", ((string)(null)), table20, "When ");
+        testRunner.When("These DiaryWeight records shall be used", ((string)(null)), table20, "When ");
 #line hidden
+                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Progress"});
+                table21.AddRow(new string[] {
+                            "25.08.2022",
+                            "Normal"});
+                table21.AddRow(new string[] {
+                            "26.08.2022",
+                            "Progress"});
+                table21.AddRow(new string[] {
+                            "27.08.2022",
+                            "Deload"});
 #line 10
- testRunner.And("DiaryWeight data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+        testRunner.And("These GymSession records shall be used", ((string)(null)), table21, "And ");
 #line hidden
-#line 11
- testRunner.And("DiaryWeight data is read from JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+        testRunner.And("The data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 12
- testRunner.Then("The previous existing weight records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 16
+        testRunner.And("The data is read from JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+        testRunner.Then("The previous existing weight records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 18
+        testRunner.Then("The previous existing gym session records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

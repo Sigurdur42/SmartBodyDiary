@@ -24,4 +24,19 @@ public class Transforms
 
         return result.OrderBy(_ => _.Day).ToArray();
     }
+
+    [StepArgumentTransformation]
+    public IEnumerable<GymSession> GymSessionTransformTable(Table table)
+    {
+        var result =
+            (from row in table.Rows
+                let date = row[0].ToDateOnlyDE()
+                select new GymSession(date)
+                {
+                    Progress = row[1].ToGymProgress(),
+                })
+            .ToList();
+
+        return result.OrderBy(_ => _.Day).ToArray();
+    }
 }
