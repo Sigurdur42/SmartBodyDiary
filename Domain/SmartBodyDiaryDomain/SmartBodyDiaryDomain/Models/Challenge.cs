@@ -11,7 +11,7 @@ public class Challenge : IDateRecord
         Day = day;
     }
 
-    public DateOnly Day { get; }
+    public DateOnly Day { get; init; }
     public string Title { get; set; } = "";
     public DateOnly Start { get; set; } = DateOnly.MinValue;
     public DateOnly End { get; set; } = DateOnly.MinValue;

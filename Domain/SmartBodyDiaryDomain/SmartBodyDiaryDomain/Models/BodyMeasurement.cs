@@ -11,7 +11,7 @@ public class BodyMeasurement : IDateRecord
         Day = day;
     }
 
-    public DateOnly Day { get; }
+    public DateOnly Day { get; init; }
     public decimal LeftArm { get; set; }
     public decimal RightArm { get; set; }
     public decimal LeftLeg { get; set; }

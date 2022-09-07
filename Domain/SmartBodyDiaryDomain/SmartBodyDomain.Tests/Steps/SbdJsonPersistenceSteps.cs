@@ -1,5 +1,7 @@
 ﻿using FluentAssertions;
+using NUnit.Framework;
 using SmartBodyDiaryDomain;
+using SmartBodyDomain.Tests.Steps;
 
 namespace SmartBodyDomain.Tests;
 
@@ -61,5 +63,26 @@ public class SbdJsonPersistenceSteps
         _containerDeserialized.GymSessions
             .OrderBy(_ => _.Day)
             .Should().BeEquivalentTo(_containerToBeUsed.GymSessions.OrderBy(_ => _.Day));
+    }
+
+    [Then(@"The previous existing challenge record shall be read")]
+    public void ThenThePreviousExistingChallengeRecordShallBeRead()
+    {
+        _containerDeserialized.Challenges
+            .OrderBy(_ => _.Day)
+            .Should().BeEquivalentTo(_containerToBeUsed.Challenges.OrderBy(_ => _.Day));
+    }
+
+    [When(@"This challenge record is to be used on '(.*)'")]
+    public void WhenThisChallengeRecordIsToBeUsedOn(DateOnly creationDate, Table challengeTable)
+    {
+        var challenge = new Challenge(creationDate);
+        challenge.FillFromReflection(challengeTable);
+        
+        var challenges = new List<Challenge>(_containerToBeUsed.Challenges)
+        {
+            challenge
+        };
+        _containerToBeUsed.Challenges = challenges.ToArray();
     }
 }

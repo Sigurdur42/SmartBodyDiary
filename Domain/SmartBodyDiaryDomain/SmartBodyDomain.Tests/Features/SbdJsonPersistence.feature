@@ -12,7 +12,12 @@
           | 25.08.2022 | Normal   |
           | 26.08.2022 | Progress |
           | 27.08.2022 | Deload   |
+        And This challenge record is to be used on '01.01.2022'
+          | Property | value      |
+          | Start    | 01.01.2022 |
+          | End      | 31.03.2022 |
         And The data is written to JSON
         And The data is read from JSON
         Then The previous existing weight records shall be read
         Then The previous existing gym session records shall be read
+        Then The previous existing challenge record shall be read

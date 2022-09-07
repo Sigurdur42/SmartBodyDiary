@@ -16,7 +16,7 @@
         Given This challenge data is to be used on '01.01.2022'
           | Property | value      |
           | Start    | 01.01.2022 |
-          | End    | 31.03.2022 |
+          | End      | 31.03.2022 |
         
         Then IsActive shall be 'true' on '01.01.2022'
         And IsActive shall be 'true' on '31.03.2022'

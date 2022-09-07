@@ -133,17 +133,32 @@ namespace SmartBodyDomain.Tests.Features
 #line 10
         testRunner.And("These GymSession records shall be used", ((string)(null)), table21, "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Property",
+                            "value"});
+                table22.AddRow(new string[] {
+                            "Start",
+                            "01.01.2022"});
+                table22.AddRow(new string[] {
+                            "End",
+                            "31.03.2022"});
 #line 15
+        testRunner.And("This challenge record is to be used on \'01.01.2022\'", ((string)(null)), table22, "And ");
+#line hidden
+#line 19
         testRunner.And("The data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 16
+#line 20
         testRunner.And("The data is read from JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 17
+#line 21
         testRunner.Then("The previous existing weight records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 18
+#line 22
         testRunner.Then("The previous existing gym session records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 23
+        testRunner.Then("The previous existing challenge record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
