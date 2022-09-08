@@ -85,4 +85,20 @@ public class SbdJsonPersistenceSteps
         };
         _containerToBeUsed.Challenges = challenges.ToArray();
     }
+
+    [Then(@"The previous existing body data record shall be read")]
+    public void ThenThePreviousExistingBodyDataRecordShallBeRead()
+    {
+        _containerDeserialized.BodyData
+            .OrderBy(_ => _.Day)
+            .Should().BeEquivalentTo(_containerToBeUsed.BodyData.OrderBy(_ => _.Day));
+    }
+
+    [When(@"This body data is to be used on '(.*)'")]
+    public void WhenThisBodyDataIsToBeUsedOn(DateOnly day, Table table)
+    {
+        var result = new BodyMeasurement(day);
+        result.FillFromReflection(table);
+        _containerToBeUsed.BodyData = new[] {result};
+    }
 }

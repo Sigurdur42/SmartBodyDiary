@@ -145,20 +145,59 @@ namespace SmartBodyDomain.Tests.Features
 #line 15
         testRunner.And("This challenge record is to be used on \'01.01.2022\'", ((string)(null)), table22, "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Area",
+                            "Length"});
+                table23.AddRow(new string[] {
+                            "LeftArm",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "RightArm",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "LeftLeg",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "RightLeg",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "Shoulder",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "Chest",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "Belly",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "BellyPlus5",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "BellyMinus5",
+                            "33.00"});
+                table23.AddRow(new string[] {
+                            "Hip",
+                            "33.00"});
 #line 19
+      testRunner.And("This body data is to be used on \'01.01.2021\'", ((string)(null)), table23, "And ");
+#line hidden
+#line 31
         testRunner.And("The data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 20
+#line 32
         testRunner.And("The data is read from JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 21
+#line 33
         testRunner.Then("The previous existing weight records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 22
+#line 34
         testRunner.Then("The previous existing gym session records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 23
+#line 35
         testRunner.Then("The previous existing challenge record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 36
+      testRunner.Then("The previous existing body data record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
