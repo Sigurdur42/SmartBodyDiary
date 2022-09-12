@@ -8,39 +8,43 @@ namespace SmartBodyDomain.Tests;
 [Binding]
 public class SbdChallengeSteps
 {
-    private SdbDateBasedRepository<Challenge> _repository = new();
-    private Challenge _challenge = new();
+    private readonly SbdScenarioContext _context;
+
+    public SbdChallengeSteps(SbdScenarioContext context)
+    {
+        _context = context;
+    }
     
     [Given(@"This challenge data is to be used on '(.*)'")]
     public void GivenThisChallengeDataIsToBeUsed(DateOnly day, Table table)
     {
-        _challenge = new Challenge(day);
-        _challenge.FillFromReflection(table);
+        _context.Challenge = new Challenge(day);
+        _context.Challenge.FillFromReflection(table);
     }
 
     [Given(@"An empty challenge repository has been initialized")]
     public void GivenAnEmptyChallengeRepositoryHasBeenInitialized()
     {
-        _repository = new SdbDateBasedRepository<Challenge>();
+        _context.ChallengeRepository = new SdbDateBasedRepository<Challenge>();
     }
 
     [Given(@"the current challenge is added to the repository")]
     public void GivenTheCurrentChallengeIsAddedToTheRepository()
     {
-        _repository.AddOrUpdate(_challenge);
+        _context.ChallengeRepository.AddOrUpdate(_context.Challenge);
     }
 
     [Then(@"Then Exactly '(.*)' body data record is in the repository")]
     public void ThenThenExactlyBodyDataRecordIsInTheRepository(int numberOfRecords)
     {
-        var result = _repository.Length;
+        var result = _context.ChallengeRepository.Length;
         result.Should().Be(numberOfRecords);
     }
 
     [Then(@"IsActive shall be '(.*)' on '(.*)'")]
     public void ThenIsActiveShallBeOn(bool isActive, DateOnly referenceDay)
     {
-        var result = _challenge.IsActive(referenceDay);
+        var result = _context.Challenge.IsActive(referenceDay);
         result.Should().Be(isActive);
     }
 }
