@@ -256,20 +256,20 @@ namespace SmartBodyDomain.Tests.Features
 #line 33
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "25.08.2022",
                             "83.00"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "26.08.2022",
                             "82.00"});
-                table9.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
 #line 34
-        testRunner.When("These weight records already exist", ((string)(null)), table9, "When ");
+        testRunner.When("These weight records already exist", ((string)(null)), table10, "When ");
 #line hidden
 #line 39
         testRunner.And("the weight for \'26.08.2022\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -311,20 +311,20 @@ namespace SmartBodyDomain.Tests.Features
 #line 43
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "25.08.2022",
                             "83.00"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "26.08.2022",
                             "82.00"});
-                table10.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
 #line 44
-        testRunner.When("These weight records already exist", ((string)(null)), table10, "When ");
+        testRunner.When("These weight records already exist", ((string)(null)), table11, "When ");
 #line hidden
 #line 49
         testRunner.And("the weight for \'01.08.2022\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -366,20 +366,20 @@ namespace SmartBodyDomain.Tests.Features
 #line 53
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "25.08.2022",
                             "83.00"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "26.08.2022",
                             "82.00"});
-                table11.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
 #line 54
-        testRunner.When("These weight records already exist", ((string)(null)), table11, "When ");
+        testRunner.When("These weight records already exist", ((string)(null)), table12, "When ");
 #line hidden
 #line 59
         testRunner.Then("The weight of \'01.08.2022\' does not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -418,21 +418,6 @@ namespace SmartBodyDomain.Tests.Features
 #line 62
         testRunner.Given("SbdDomainService is initialized with in-memory repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Day",
-                            "Weight"});
-                table12.AddRow(new string[] {
-                            "25.08.2022",
-                            "83.00"});
-                table12.AddRow(new string[] {
-                            "26.08.2022",
-                            "82.00"});
-                table12.AddRow(new string[] {
-                            "27.08.2022",
-                            "85.00"});
-#line 63
-        testRunner.When("These weight records already exist", ((string)(null)), table12, "When ");
-#line hidden
                 TechTalk.SpecFlow.Table table13 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
@@ -445,8 +430,23 @@ namespace SmartBodyDomain.Tests.Features
                 table13.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
+#line 63
+        testRunner.When("These weight records already exist", ((string)(null)), table13, "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table14 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Weight"});
+                table14.AddRow(new string[] {
+                            "25.08.2022",
+                            "83.00"});
+                table14.AddRow(new string[] {
+                            "26.08.2022",
+                            "82.00"});
+                table14.AddRow(new string[] {
+                            "27.08.2022",
+                            "85.00"});
 #line 68
-        testRunner.Then("GetAllWeightData returns this", ((string)(null)), table13, "Then ");
+        testRunner.Then("GetAllWeightData returns this", ((string)(null)), table14, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

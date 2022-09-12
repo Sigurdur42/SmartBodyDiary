@@ -30,7 +30,7 @@ internal abstract class SbdWeightServiceBase : ISbdWeightService
 
     public SlidingWeight? GetWeight(DateOnly date)
     {
-        return _slidingWeightRepository.GetWeight(date);
+        return _slidingWeightRepository.Get(date);
     }
 
     protected abstract decimal CalculateSingleValue(List<decimal> singleValues);

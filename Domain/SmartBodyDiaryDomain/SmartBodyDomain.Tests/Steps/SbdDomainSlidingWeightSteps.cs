@@ -6,17 +6,21 @@ namespace SmartBodyDomain.Tests.Steps;
 [Binding]
 public class SbdDomainSlidingWeightSteps
 {
-    private List<DiaryWeight> _availableWeights = new();
-    private ISbdWeightService? _averageWeightService;
+    private readonly SbdScenarioContext _context;
+
     private Exception? _lastException;
-    private readonly SlidingWeightRepository _slidingWeightRepository = new();
+
+    public SbdDomainSlidingWeightSteps(SbdScenarioContext context)
+    {
+        _context = context;
+    }
 
     [Given(@"the sliding weight is calculated considering '(.*)' records")]
     public void GivenTheAverageWeightIsCalculated(int rangeToConsider)
     {
         try
         {
-            _averageWeightService!.Calculate(_availableWeights.ToArray(), rangeToConsider);
+            _context.AverageWeightService!.Calculate(_context.AvailableWeights.ToArray(), rangeToConsider);
         }
         catch (Exception error)
         {
@@ -28,19 +32,19 @@ public class SbdDomainSlidingWeightSteps
     [Given(@"The average sliding calculator is used")]
     public void GivenSbdAverageWeightServiceExists()
     {
-        _averageWeightService = new SbdWeightServiceAverage(_slidingWeightRepository);
+        _context.AverageWeightService = new SbdWeightServiceAverage(_context.SlidingWeightRepository);
     }
 
     [Given(@"These weight records are available")]
     public void GivenTheseWeightRecordsAreAvailable(IEnumerable<DiaryWeight> existingData)
     {
-        _availableWeights = existingData.ToList();
+        _context.AvailableWeights = existingData.ToList();
     }
 
     [Then(@"The sliding weight for '(.*)' is '(.*)'")]
     public void ThenTheAverageWeightForIs(DateOnly date, decimal averageWeight)
     {
-        var foundWeight = _averageWeightService!.GetWeight(date);
+        var foundWeight = _context.AverageWeightService!.GetWeight(date);
         foundWeight?.SlidingRounded.Should().Be(averageWeight);
     }
 
@@ -53,6 +57,6 @@ public class SbdDomainSlidingWeightSteps
     [Given(@"The weighted sliding calculator is used")]
     public void GivenTheWeightedSlidingCalculatorIsUsed()
     {
-        _averageWeightService = new SbdWeightServiceWeighted(_slidingWeightRepository);
+        _context.AverageWeightService = new SbdWeightServiceWeighted(_context.SlidingWeightRepository);
     }
 }
