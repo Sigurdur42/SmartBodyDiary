@@ -8,7 +8,7 @@ namespace SmartBodyDomain.Tests.Steps;
 public class SbdDomainSteps
 {
     private SbdDomainService? _service;
-    private SbdRepository? memoryRepository;
+    private SdbDateBasedRepository<DiaryWeight>? memoryRepository;
 
     [Then(@"The weight of '(.*)' is '(.*)'")]
     public void ThenTheWeightOfIs(DateOnly date, decimal weight)
@@ -21,14 +21,14 @@ public class SbdDomainSteps
     [When(@"There is only (.*) weight record in the repository")]
     public void ThenThereIsOnlyWeightRecordInTheRepository(int numberOfRecords)
     {
-        var found = memoryRepository!.GetWeightCount();
+        var found = memoryRepository!.Length;
         found.Should().Be(numberOfRecords);
     }
 
     [Given(@"SbdDomainService is initialized with in-memory repository")]
     public void GivenSbdDomainServiceIsInitializedWithInMemoryRepository()
     {
-        memoryRepository = new SbdRepository();
+        memoryRepository = new SdbDateBasedRepository<DiaryWeight>();
         _service = new SbdDomainService(memoryRepository);
     }
 

@@ -2,30 +2,30 @@
 
 public class SbdDomainService
 {
-    private readonly SbdRepository _repository;
+    private readonly SdbDateBasedRepository<DiaryWeight> _repository;
 
-    public SbdDomainService(SbdRepository repository)
+    public SbdDomainService(SdbDateBasedRepository<DiaryWeight> repository)
     {
         _repository = repository;
     }
 
     public void SetWeight(DateOnly date, decimal weight)
     {
-        _repository.SetWeight(date, weight);
+        _repository.AddOrUpdate(new DiaryWeight(date, weight));
     }
 
     public decimal? GetWeight(DateOnly date)
     {
-        return _repository.GetWeight(date);
+        return _repository.Get(date)?.Weight;
     }
 
     public void RemoveWeight(DateOnly date)
     {
-        _repository.RemoveWeight(date);
+        _repository.Remove(date);
     }
 
     public DiaryWeight[] GetAllWeightData()
     {
-        return _repository.GetAllWeightData();
+        return _repository.GetAllData();
     }
 }
