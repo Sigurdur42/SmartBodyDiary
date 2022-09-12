@@ -2,7 +2,7 @@
 
 namespace SmartBodyDiaryDomain;
 
-public class JsonPersistenceContainer
+public class PersistenceContainer
 {
     public DiaryWeight[] Weights { get; set; } = Array.Empty<DiaryWeight>();
     public GymSession[] GymSessions { get; set; } = Array.Empty<GymSession>();

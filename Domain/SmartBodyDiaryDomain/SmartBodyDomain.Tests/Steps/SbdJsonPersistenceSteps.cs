@@ -8,8 +8,8 @@ namespace SmartBodyDomain.Tests;
 [Binding]
 public class SbdJsonPersistenceSteps
 {
-    private readonly JsonPersistenceContainer _containerToBeUsed = new JsonPersistenceContainer();
-    private  JsonPersistenceContainer _containerDeserialized = new JsonPersistenceContainer();
+    private readonly PersistenceContainer _containerToBeUsed = new PersistenceContainer();
+    private  PersistenceContainer _containerDeserialized = new PersistenceContainer();
    
     private JsonPersistence _persistence = new();
     private string _serializedJson = "";
@@ -40,7 +40,7 @@ public class SbdJsonPersistenceSteps
     [When(@"The data is read from JSON")]
     public void WhenDiaryWeightDataIsReadFromJson()
     {
-        _containerDeserialized = _persistence.Deserialize(_serializedJson) ?? new JsonPersistenceContainer();
+        _containerDeserialized = _persistence.Deserialize(_serializedJson) ?? new PersistenceContainer();
     }
 
     [Then(@"The previous existing weight records shall be read")]

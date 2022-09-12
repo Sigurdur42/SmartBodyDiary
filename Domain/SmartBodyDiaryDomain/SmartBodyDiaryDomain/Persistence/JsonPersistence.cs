@@ -17,9 +17,9 @@ public class JsonPersistence
         set => _options.WriteIndented = value;
     }
 
-    public string Serialize(JsonPersistenceContainer dataToBeSerialized)
+    public string Serialize(PersistenceContainer dataToBeSerialized)
         => JsonSerializer.Serialize(dataToBeSerialized, _options);
 
-    public JsonPersistenceContainer? Deserialize(string serializedJson)
-        => JsonSerializer.Deserialize<JsonPersistenceContainer>(serializedJson, _options);
+    public PersistenceContainer? Deserialize(string serializedJson)
+        => JsonSerializer.Deserialize<PersistenceContainer>(serializedJson, _options);
 }
