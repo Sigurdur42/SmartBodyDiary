@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using SmartBodyDiaryDomain;
 using SmartBodyDomain.Tests.Steps;
 
@@ -14,7 +13,7 @@ public class SbdChallengeSteps
     {
         _context = context;
     }
-    
+
     [Given(@"This challenge data is to be used on '(.*)'")]
     public void GivenThisChallengeDataIsToBeUsed(DateOnly day, Table table)
     {
@@ -48,4 +47,3 @@ public class SbdChallengeSteps
         result.Should().Be(isActive);
     }
 }
-

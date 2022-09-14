@@ -32,6 +32,7 @@ public static class StepExtensions
                 case "string":
                     value = row[1];
                     break;
+
                 case "decimal":
                     value = decimal.Parse(row[1], StepExtensions.English);
                     break;

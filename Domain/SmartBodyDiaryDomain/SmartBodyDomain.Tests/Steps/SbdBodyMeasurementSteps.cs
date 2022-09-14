@@ -1,8 +1,6 @@
-﻿using System.Reflection;
-using FluentAssertions;
+﻿using FluentAssertions;
 using SmartBodyDiaryDomain;
 using SmartBodyDomain.Tests.Steps;
-using TechTalk.SpecFlow.Assist;
 
 namespace SmartBodyDomain.Tests;
 
@@ -10,6 +8,8 @@ namespace SmartBodyDomain.Tests;
 public class SbdBodyMeasurementRepositorySteps
 {
     private SdbDateBasedRepository<BodyMeasurement> _repository = new();
+
+    private BodyMeasurement _dataToUse = new BodyMeasurement();
 
     [Given(@"An empty body measurement repository has been initialized")]
     public void GivenAnEmptyBodyMeasurementRepositoryHasBeenInitialized()
@@ -29,8 +29,6 @@ public class SbdBodyMeasurementRepositorySteps
         var result = _repository.Length;
         result.Should().Be(numberOfRecords);
     }
-
-    private BodyMeasurement _dataToUse = new BodyMeasurement();
 
     [Given(@"This data has been measured at '(.*)'")]
     public void GivenThisDataHasBeenMeasuredAt(DateOnly day, Table table)

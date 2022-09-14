@@ -6,8 +6,8 @@ namespace SmartBodyDomain.Tests;
 [Binding]
 public class SbdGymSessionRepositorySteps
 {
-    private SdbDateBasedRepository<GymSession> _repository = new(); 
-    
+    private SdbDateBasedRepository<GymSession> _repository = new();
+
     [Given(@"An empty gym session repository is initialized")]
     public void GivenAnEmptyGymSessionRepositoryIsInitialized()
     {

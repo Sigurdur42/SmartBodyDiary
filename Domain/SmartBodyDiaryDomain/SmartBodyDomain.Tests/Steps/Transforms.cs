@@ -1,5 +1,4 @@
 ﻿using System.Globalization;
-using FluentAssertions;
 using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain.Tests.Steps;
@@ -18,8 +17,8 @@ public class Transforms
     {
         var result =
             (from row in table.Rows
-                let date = row[0].ToDateOnlyDE()
-                select new DiaryWeight(date, decimal.Parse(row[1], NumberStyles.Any, StepExtensions.English)))
+             let date = row[0].ToDateOnlyDE()
+             select new DiaryWeight(date, decimal.Parse(row[1], NumberStyles.Any, StepExtensions.English)))
             .ToList();
 
         return result.OrderBy(_ => _.Day).ToArray();
@@ -30,11 +29,11 @@ public class Transforms
     {
         var result =
             (from row in table.Rows
-                let date = row[0].ToDateOnlyDE()
-                select new GymSession(date)
-                {
-                    Progress = row[1].ToGymProgress(),
-                })
+             let date = row[0].ToDateOnlyDE()
+             select new GymSession(date)
+             {
+                 Progress = row[1].ToGymProgress(),
+             })
             .ToList();
 
         return result.OrderBy(_ => _.Day).ToArray();

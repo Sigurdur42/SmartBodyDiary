@@ -4,7 +4,7 @@ namespace SmartBodyDiaryDomain;
 
 public class JsonPersistence
 {
-    private static readonly JsonSerializerOptions _options = new ();
+    private static readonly JsonSerializerOptions _options = new();
 
     static JsonPersistence()
     {

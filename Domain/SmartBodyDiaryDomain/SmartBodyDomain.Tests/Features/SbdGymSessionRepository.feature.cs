@@ -133,7 +133,7 @@ this.FeatureBackground();
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Updating gym session", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 11
- this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -156,16 +156,16 @@ this.FeatureBackground();
 this.FeatureBackground();
 #line hidden
 #line 12
-  testRunner.Given("A gym session is added at \'02.10.2022\' with status \'Progress\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("A gym session is added at \'02.10.2022\' with status \'Progress\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 13
-  testRunner.Then("Exactly \'1\' gym session(s) is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Exactly \'1\' gym session(s) is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 14
-  testRunner.And("A gym session is added at \'02.10.2022\' with status \'Normal\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("A gym session is added at \'02.10.2022\' with status \'Normal\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 15
-  testRunner.Then("The gym status on \'02.10.2022\' is \'Normal\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The gym status on \'02.10.2022\' is \'Normal\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

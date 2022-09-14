@@ -13,5 +13,6 @@ public interface ISbdWeightService
     /// <br/> This is typically a week (7 days), a month or a challenge range.
     /// </param>
     void Calculate(DiaryWeight[] weightData, int rangeToConsider);
+
     SlidingWeight? GetWeight(DateOnly date);
 }

@@ -9,20 +9,21 @@ public class ScopeCalculator
     {
         _weightRepository = weightRepository;
     }
+
     public CalculatedScope Calculate(DateOnly startDate, DateOnly endDate)
     {
-        var result =  new CalculatedScope();
-        
+        var result = new CalculatedScope();
+
         var all = _weightRepository.GetAllData();
         var data = all
             .Where(_ => _.Day >= startDate && _.Day <= endDate)
-            .OrderBy(_=>_.Day)
+            .OrderBy(_ => _.Day)
             .ToArray();
 
-            result.WeightDiff = data.Length < 2
-                ? 0.00m
-                : data.Last().Weight - data.First().Weight;
+        result.WeightDiff = data.Length < 2
+            ? 0.00m
+            : data.Last().Weight - data.First().Weight;
 
-            return result;
+        return result;
     }
 }

@@ -24,4 +24,3 @@ public class GymSession : IDateRecord
 
     public GymProgress Progress { get; set; }
 }
-

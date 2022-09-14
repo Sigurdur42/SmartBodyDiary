@@ -19,7 +19,7 @@ public class DateOnlyConverter : JsonConverter<DateOnly>
 
     public override DateOnly Read(
         ref Utf8JsonReader reader,
-        Type typeToConvert, 
+        Type typeToConvert,
         JsonSerializerOptions options)
     {
         var value = reader.GetString();

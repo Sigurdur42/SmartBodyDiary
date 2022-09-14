@@ -10,7 +10,7 @@ public class SdbDateBasedRepository<TDataType> where TDataType : IDateRecord, ne
     public void AddOrUpdate(TDataType record)
         => _data.AddOrUpdate(record.Day, record, (_, _) => record);
 
-    public TDataType? Get(DateOnly date) 
+    public TDataType? Get(DateOnly date)
         => _data.TryGetValue(date, out var result) ? result : default(TDataType);
 
     public void Clear() => _data.Clear();

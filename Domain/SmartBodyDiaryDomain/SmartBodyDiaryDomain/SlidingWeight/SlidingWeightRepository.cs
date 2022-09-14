@@ -1,8 +1,5 @@
-﻿using System.Collections.Concurrent;
-
-namespace SmartBodyDiaryDomain;
+﻿namespace SmartBodyDiaryDomain;
 
 public class SlidingWeightRepository : SdbDateBasedRepository<SlidingWeight>
 {
-   
 }

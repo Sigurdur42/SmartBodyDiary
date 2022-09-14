@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
 using SmartBodyDiaryDomain;
 using SmartBodyDomain.Tests.Steps;
 
@@ -9,12 +8,10 @@ namespace SmartBodyDomain.Tests;
 public class SbdJsonPersistenceSteps
 {
     private readonly PersistenceContainer _containerToBeUsed = new PersistenceContainer();
-    private  PersistenceContainer _containerDeserialized = new PersistenceContainer();
-   
+    private PersistenceContainer _containerDeserialized = new PersistenceContainer();
+
     private JsonPersistence _persistence = new();
     private string _serializedJson = "";
-    
-   
 
     [Given(@"The DiaryWeight JSON persistence is create")]
     public void GivenTheDiaryWeightJsonPersistenceIsCreate()
@@ -78,7 +75,7 @@ public class SbdJsonPersistenceSteps
     {
         var challenge = new Challenge(creationDate);
         challenge.FillFromReflection(challengeTable);
-        
+
         var challenges = new List<Challenge>(_containerToBeUsed.Challenges)
         {
             challenge
@@ -99,6 +96,6 @@ public class SbdJsonPersistenceSteps
     {
         var result = new BodyMeasurement(day);
         result.FillFromReflection(table);
-        _containerToBeUsed.BodyData = new[] {result};
+        _containerToBeUsed.BodyData = new[] { result };
     }
 }
