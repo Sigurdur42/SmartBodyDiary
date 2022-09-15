@@ -2,30 +2,37 @@
 
 public class ScopeCalculator
 {
-    private readonly SdbDateBasedRepository<DiaryWeight> _weightRepository;
+    private readonly SdbDateBasedRepository<SlidingWeight> _slidingWeightRepository;
 
     public ScopeCalculator(
-        SdbDateBasedRepository<DiaryWeight> weightRepository)
+        SdbDateBasedRepository<SlidingWeight> slidingWeightRepository)
     {
-        _weightRepository = weightRepository;
+        _slidingWeightRepository = slidingWeightRepository;
     }
 
     public CalculatedScope Calculate(DateOnly startDate, DateOnly endDate)
     {
         var result = new CalculatedScope();
 
-        var all = _weightRepository.GetAllData();
-        var data = all
+        var allSliding = _slidingWeightRepository.GetAllData();
+        var slidingData = allSliding
             .Where(_ => _.Day >= startDate && _.Day <= endDate)
             .OrderBy(_ => _.Day)
             .ToArray();
 
-        result.WeightDiff = data.Length < 2
+        result.WeightDiffSliding = slidingData.Length < 2
             ? 0.00m
-            : data.Last().Weight - data.First().Weight;
+            : slidingData.Last().SlidingRounded - slidingData.First().SlidingRounded;
 
-        result.Weights = data;
+
+        result.WeightDiff = slidingData.Length < 2
+            ? 0.00m
+            : slidingData.Last().Weight - slidingData.First().Weight;
+
+        result.Weights = slidingData;
 
         return result;
     }
+
+
 }

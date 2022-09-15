@@ -19,14 +19,17 @@ Background:
 Scenario: Calculate weekly scope when all data is present
 	Given The scope shall be calculated from '18.08.2020' to '25.08.2020'
 	Then The weight diff shall be '5.2' kg
+	Then The sliding weight diff shall be '1.56' kg
 	And There must be '7' weight records in scope result
 
 Scenario: Calculate weekly scope when no data is present
 	Given The scope shall be calculated from '18.08.2018' to '25.08.2018'
 	Then The weight diff shall be '0' kg
+	Then The sliding weight diff shall be '0' kg
 	And There must be '0' weight records in scope result
 
 Scenario: Calculate weekly scope when a single data point is present
 	Given The scope shall be calculated from '18.08.2018' to '18.08.2020'
 	Then The weight diff shall be '0' kg
+	Then The sliding weight diff shall be '0' kg
 	And There must be '1' weight records in scope result

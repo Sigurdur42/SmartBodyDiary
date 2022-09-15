@@ -16,7 +16,7 @@ public class SbdCalculatedScopeSteps
     [Given(@"The scope shall be calculated from '(.*)' to '(.*)'")]
     public void GivenTheScopeShallBeCalculatedFromTo(DateOnly startDate, DateOnly endDate)
     {
-        var calculator = new ScopeCalculator(_context.WeightRepository);
+        var calculator = new ScopeCalculator(_context.SlidingWeightRepository);
         _context.LastCalculatedScope = calculator.Calculate(startDate, endDate);
     }
 
@@ -43,6 +43,12 @@ public class SbdCalculatedScopeSteps
     public void ThenThereMustBeWeightRecordsInScopeResult(int numberOfRecords)
     {
         _context.LastCalculatedScope.Weights.Length.Should().Be(numberOfRecords);
+    }
+
+    [Then(@"The sliding weight diff shall be '([^']*)' kg")]
+    public void ThenTheSlidingWeightDiffShallBeKg(decimal slidingWeightDiff)
+    {
+        _context.LastCalculatedScope.WeightDiffSliding.Should().Be(slidingWeightDiff);
     }
 
 }

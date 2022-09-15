@@ -3,5 +3,6 @@
 public class CalculatedScope
 {
     public decimal WeightDiff { get; set; }
-    public DiaryWeight[] Weights { get; internal set; } = Array.Empty<DiaryWeight>();
+    public SlidingWeight[] Weights { get; internal set; } = Array.Empty<SlidingWeight>();
+    public decimal WeightDiffSliding { get; internal set; }
 }
