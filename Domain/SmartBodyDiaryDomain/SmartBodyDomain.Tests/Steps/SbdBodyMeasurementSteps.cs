@@ -7,17 +7,23 @@ namespace SmartBodyDomain.Tests;
 [Binding]
 public class SbdBodyMeasurementRepositorySteps
 {
+    private readonly SbdScenarioContext _context;
+
     private SdbDateBasedRepository<BodyMeasurement> _repository = new();
 
     private BodyMeasurement _dataToUse = new BodyMeasurement();
 
+    public SbdBodyMeasurementRepositorySteps(SbdScenarioContext context)
+    {
+        this._context = context;
+    }
     [Given(@"An empty body measurement repository has been initialized")]
     public void GivenAnEmptyBodyMeasurementRepositoryHasBeenInitialized()
     {
         _repository = new SdbDateBasedRepository<BodyMeasurement>();
     }
 
-    [Given(@"the measure data is added to the repository")]
+    [Given(@"The measured body data is added to the repository")]
     public void GivenTheMeasureDataIsAddedToTheRepository()
     {
         _repository.AddOrUpdate(_dataToUse);

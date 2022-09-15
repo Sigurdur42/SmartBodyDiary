@@ -76,9 +76,9 @@ namespace SmartBodyDomain.Tests.Features
         public virtual void FeatureBackground()
         {
 #line 3
-    #line hidden
+#line hidden
 #line 4
-        testRunner.Given("An empty challenge repository has been initialized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("An empty challenge repository has been initialized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -90,7 +90,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a challenge record to the repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -110,7 +110,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Property",
@@ -119,13 +119,13 @@ namespace SmartBodyDomain.Tests.Features
                             "Title",
                             "Test Challenge"});
 #line 7
-        testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table3, "Given ");
+ testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table3, "Given ");
 #line hidden
 #line 11
-        testRunner.And("the current challenge is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the current challenge is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 12
-        testRunner.Then("Then Exactly \'1\' body data record is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Exactly \'1\' challenge record is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -139,7 +139,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("IsActive is dynamically calculated", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 15
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -159,7 +159,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Property",
@@ -171,22 +171,22 @@ namespace SmartBodyDomain.Tests.Features
                             "End",
                             "31.03.2022"});
 #line 16
-        testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table4, "Given ");
+ testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table4, "Given ");
 #line hidden
 #line 21
-        testRunner.Then("IsActive shall be \'true\' on \'01.01.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("IsActive shall be \'true\' on \'01.01.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 22
-        testRunner.And("IsActive shall be \'true\' on \'31.03.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("IsActive shall be \'true\' on \'31.03.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 23
-        testRunner.And("IsActive shall be \'true\' on \'01.02.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("IsActive shall be \'true\' on \'01.02.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 25
-        testRunner.And("IsActive shall be \'false\' on \'01.04.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("IsActive shall be \'false\' on \'01.04.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 26
-        testRunner.And("IsActive shall be \'false\' on \'31.12.2021\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("IsActive shall be \'false\' on \'31.12.2021\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

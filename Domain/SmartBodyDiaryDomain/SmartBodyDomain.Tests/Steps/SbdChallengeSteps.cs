@@ -33,7 +33,7 @@ public class SbdChallengeSteps
         _context.ChallengeRepository.AddOrUpdate(_context.Challenge);
     }
 
-    [Then(@"Then Exactly '(.*)' body data record is in the repository")]
+    [Then(@"Exactly '(.*)' challenge record is in the repository")]
     public void ThenThenExactlyBodyDataRecordIsInTheRepository(int numberOfRecords)
     {
         var result = _context.ChallengeRepository.Length;

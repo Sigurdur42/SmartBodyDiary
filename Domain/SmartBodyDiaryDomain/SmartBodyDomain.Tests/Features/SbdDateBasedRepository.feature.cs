@@ -76,9 +76,9 @@ namespace SmartBodyDomain.Tests.Features
         public virtual void FeatureBackground()
         {
 #line 3
-    #line hidden
+#line hidden
 #line 4
-        testRunner.Given("The date based repository has been created for repo testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("The date based repository has been created for repo testing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -90,7 +90,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a value to an empty repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -110,16 +110,16 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
 #line 7
-        testRunner.When("the value \'42\' is added on \'01.05.2012\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("the value \'42\' is added on \'01.05.2012\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 8
-        testRunner.Then("the repository must have \'1\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'1\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 9
-        testRunner.And("the value of \'01.05.2012\' must be \'42\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'01.05.2012\' must be \'42\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -133,7 +133,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add a value to filled repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 11
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -153,7 +153,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -234,22 +234,22 @@ namespace SmartBodyDomain.Tests.Features
                             "2020-09-18",
                             "85.9"});
 #line 12
-        testRunner.When("These repository records already exist", ((string)(null)), table5, "When ");
+ testRunner.When("These repository records already exist", ((string)(null)), table5, "When ");
 #line hidden
 #line 39
-        testRunner.Then("the repository must have \'25\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'25\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 40
-        testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 41
-        testRunner.And("the value \'42\' is added on \'01.05.2012\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value \'42\' is added on \'01.05.2012\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 42
-        testRunner.Then("the repository must have \'26\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'26\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 43
-        testRunner.And("the value of \'01.05.2012\' must be \'42\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'01.05.2012\' must be \'42\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -263,7 +263,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Update a value to filled repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 45
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -283,7 +283,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -295,22 +295,22 @@ namespace SmartBodyDomain.Tests.Features
                             "2020-09-18",
                             "85.9"});
 #line 46
-        testRunner.When("These repository records already exist", ((string)(null)), table6, "When ");
+ testRunner.When("These repository records already exist", ((string)(null)), table6, "When ");
 #line hidden
 #line 50
-        testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 51
-        testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 52
-        testRunner.And("the value \'42\' is added on \'17.09.2020\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value \'42\' is added on \'17.09.2020\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 53
-        testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 54
-        testRunner.And("the value of \'17.09.2020\' must be \'42\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'17.09.2020\' must be \'42\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -324,7 +324,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove an existing value to filled repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 56
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -344,7 +344,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -356,22 +356,22 @@ namespace SmartBodyDomain.Tests.Features
                             "2020-09-18",
                             "85.9"});
 #line 57
-        testRunner.When("These repository records already exist", ((string)(null)), table7, "When ");
+ testRunner.When("These repository records already exist", ((string)(null)), table7, "When ");
 #line hidden
 #line 61
-        testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 62
-        testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 63
-        testRunner.And("the value on \'17.09.2020\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value on \'17.09.2020\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 64
-        testRunner.Then("the repository must have \'1\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'1\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 65
-        testRunner.And("the value of \'17.09.2020\' must not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'17.09.2020\' must not exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -385,7 +385,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Remove a non existing value to filled repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 67
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -405,7 +405,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -417,19 +417,19 @@ namespace SmartBodyDomain.Tests.Features
                             "2020-09-18",
                             "85.9"});
 #line 68
-        testRunner.When("These repository records already exist", ((string)(null)), table8, "When ");
+ testRunner.When("These repository records already exist", ((string)(null)), table8, "When ");
 #line hidden
 #line 72
-        testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 73
-        testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value of \'18.09.2020\' must be \'85.9\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 74
-        testRunner.And("the value on \'01.09.2020\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("the value on \'01.09.2020\' is removed", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 75
-        testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the repository must have \'2\' record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -443,7 +443,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GetAllData returns filled collection", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 77
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -463,7 +463,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -475,10 +475,10 @@ namespace SmartBodyDomain.Tests.Features
                             "2020-09-18",
                             "85.9"});
 #line 78
-        testRunner.When("These repository records already exist", ((string)(null)), table9, "When ");
+ testRunner.When("These repository records already exist", ((string)(null)), table9, "When ");
 #line hidden
 #line 82
-        testRunner.Then("GetAllData returns \'2\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("GetAllData returns \'2\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -492,7 +492,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("GetAllData on empty collection returns empty collection", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 84
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -512,10 +512,10 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
 #line 85
-        testRunner.Then("GetAllData returns \'0\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("GetAllData returns \'0\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

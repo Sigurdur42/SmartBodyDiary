@@ -76,9 +76,9 @@ namespace SmartBodyDomain.Tests.Features
         public virtual void FeatureBackground()
         {
 #line 3
-    #line hidden
+#line hidden
 #line 4
-        testRunner.Given("An empty body measurement repository has been initialized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("An empty body measurement repository has been initialized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
         }
         
@@ -90,7 +90,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add body data to repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 6
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -110,7 +110,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                             "Area",
@@ -146,13 +146,13 @@ namespace SmartBodyDomain.Tests.Features
                             "Hip",
                             "33.00"});
 #line 7
-        testRunner.Given("This data has been measured at \'01.01.2021\'", ((string)(null)), table1, "Given ");
+ testRunner.Given("This data has been measured at \'01.01.2021\'", ((string)(null)), table1, "Given ");
 #line hidden
 #line 20
-        testRunner.And("the measure data is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("The measured body data is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 21
-        testRunner.Then("Exactly \'1\' body data record is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("Exactly \'1\' body data record is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

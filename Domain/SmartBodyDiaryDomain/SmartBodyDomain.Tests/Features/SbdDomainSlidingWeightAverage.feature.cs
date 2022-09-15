@@ -76,9 +76,9 @@ namespace SmartBodyDomain.Tests.Features
         public virtual void FeatureBackground()
         {
 #line 3
-    #line hidden
+#line hidden
 #line 4
-        testRunner.Given("The average sliding calculator is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("The average sliding calculator is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table15 = new TechTalk.SpecFlow.Table(new string[] {
                         "Day",
@@ -543,7 +543,7 @@ namespace SmartBodyDomain.Tests.Features
                         "2021-06-10",
                         "80.8"});
 #line 5
-        testRunner.And("These weight records are available", ((string)(null)), table15, "And ");
+ testRunner.And("These weight records are available", ((string)(null)), table15, "And ");
 #line hidden
         }
         
@@ -555,7 +555,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calling calculate without weight data", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 161
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -575,19 +575,19 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
 #line 162
-        testRunner.Given("These weight records are available", ((string)(null)), table16, "Given ");
+ testRunner.Given("These weight records are available", ((string)(null)), table16, "Given ");
 #line hidden
 #line 164
-        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 165
-        testRunner.Then("No weight calculation exception occurred", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("No weight calculation exception occurred", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -601,7 +601,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calling calculate with a single weight record", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 167
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -621,7 +621,7 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
                 TechTalk.SpecFlow.Table table17 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -630,13 +630,13 @@ namespace SmartBodyDomain.Tests.Features
                             "2021-06-10",
                             "80.8"});
 #line 168
-        testRunner.Given("These weight records are available", ((string)(null)), table17, "Given ");
+ testRunner.Given("These weight records are available", ((string)(null)), table17, "Given ");
 #line hidden
 #line 171
-        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 172
-        testRunner.Then("The sliding weight for \'10.06.2021\' is \'80.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The sliding weight for \'10.06.2021\' is \'80.8\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -650,7 +650,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the average weight on a given day", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 174
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -670,13 +670,13 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
 #line 175
-        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 176
-        testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.30\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.30\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -692,7 +692,7 @@ namespace SmartBodyDomain.Tests.Features
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the average weight on a given day is correct after multiple calculation ca" +
                     "lls", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 178
-    this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -712,19 +712,19 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
 #line 179
-        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 180
-        testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.30\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.30\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 181
-        testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("the sliding weight is calculated considering \'7\' records", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 182
-        testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.30\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The sliding weight for \'09.06.2021\' is \'81.30\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
