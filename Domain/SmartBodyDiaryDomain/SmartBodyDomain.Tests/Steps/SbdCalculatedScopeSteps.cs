@@ -1,14 +1,14 @@
 ﻿using FluentAssertions;
 using SmartBodyDiaryDomain;
 
-namespace SmartBodyDomain.Tests;
+namespace SmartBodyDomain.Tests.Steps;
 
 [Binding]
-public class SbdCalculatedScopeTests
+public class SbdCalculatedScopeSteps
 {
     private readonly SbdScenarioContext _context;
 
-    public SbdCalculatedScopeTests(SbdScenarioContext context)
+    public SbdCalculatedScopeSteps(SbdScenarioContext context)
     {
         _context = context;
     }
@@ -38,4 +38,11 @@ public class SbdCalculatedScopeTests
     {
         _context.AverageWeightService!.Calculate(_context.AvailableWeights.ToArray(), 7);
     }
+
+    [Then(@"There must be '([^']*)' weight records in scope result")]
+    public void ThenThereMustBeWeightRecordsInScopeResult(int numberOfRecords)
+    {
+        _context.LastCalculatedScope.Weights.Length.Should().Be(numberOfRecords);
+    }
+
 }

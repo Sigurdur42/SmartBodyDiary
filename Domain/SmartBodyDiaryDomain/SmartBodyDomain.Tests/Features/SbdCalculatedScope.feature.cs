@@ -76,27 +76,58 @@ namespace SmartBodyDomain.Tests.Features
         public virtual void FeatureBackground()
         {
 #line 3
-    #line hidden
+#line hidden
 #line 4
-        testRunner.Given("The average sliding calculator is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("The average sliding calculator is used", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "Day",
-                        "Weight"});
+                        "Weight",
+                        "Comment"});
             table2.AddRow(new string[] {
                         "2020-08-18",
-                        "82.5"});
+                        "82.5",
+                        "Start of week 1"});
+            table2.AddRow(new string[] {
+                        "2020-08-19",
+                        "83.5",
+                        ""});
+            table2.AddRow(new string[] {
+                        "2020-08-20",
+                        "83.5",
+                        ""});
+            table2.AddRow(new string[] {
+                        "2020-08-21",
+                        "84.5",
+                        ""});
+            table2.AddRow(new string[] {
+                        "2020-08-22",
+                        "81.5",
+                        ""});
+            table2.AddRow(new string[] {
+                        "2020-08-24",
+                        "85.2",
+                        ""});
             table2.AddRow(new string[] {
                         "2020-08-25",
-                        "87.7"});
+                        "87.7",
+                        "End of week 1"});
+            table2.AddRow(new string[] {
+                        "2020-08-30",
+                        "87.7",
+                        ""});
+            table2.AddRow(new string[] {
+                        "2020-09-01",
+                        "87.7",
+                        ""});
 #line 5
-        testRunner.Given("These weight records are available", ((string)(null)), table2, "Given ");
+ testRunner.Given("These weight records are available", ((string)(null)), table2, "Given ");
 #line hidden
-#line 9
-        testRunner.And("The given data is set in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+ testRunner.And("The given data is set in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 10
-        testRunner.And("The sliding weight has been calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 17
+ testRunner.And("The sliding weight has been calculated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
         }
         
@@ -107,8 +138,8 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate weekly scope when all data is present", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 12
-    this.ScenarioInitialize(scenarioInfo);
+#line 19
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -128,13 +159,16 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
-#line 13
-        testRunner.Given("The scope shall be calculated from \'18.08.2020\' to \'25.08.2020\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 20
+ testRunner.Given("The scope shall be calculated from \'18.08.2020\' to \'25.08.2020\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 14
-        testRunner.Then("The weight diff shall be \'5.2\' kg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 21
+ testRunner.Then("The weight diff shall be \'5.2\' kg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 22
+ testRunner.And("There must be \'7\' weight records in scope result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -147,8 +181,8 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate weekly scope when no data is present", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 16
-    this.ScenarioInitialize(scenarioInfo);
+#line 24
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -168,13 +202,16 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
-#line 17
-        testRunner.Given("The scope shall be calculated from \'18.08.2018\' to \'25.08.2018\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 25
+ testRunner.Given("The scope shall be calculated from \'18.08.2018\' to \'25.08.2018\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 18
-        testRunner.Then("The weight diff shall be \'0\' kg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 26
+ testRunner.Then("The weight diff shall be \'0\' kg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 27
+ testRunner.And("There must be \'0\' weight records in scope result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -187,8 +224,8 @@ namespace SmartBodyDomain.Tests.Features
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Calculate weekly scope when a single data point is present", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 20
-    this.ScenarioInitialize(scenarioInfo);
+#line 29
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -208,13 +245,16 @@ namespace SmartBodyDomain.Tests.Features
             {
                 this.ScenarioStart();
 #line 3
-    this.FeatureBackground();
+this.FeatureBackground();
 #line hidden
-#line 21
-        testRunner.Given("The scope shall be calculated from \'18.08.2018\' to \'18.08.2020\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 30
+ testRunner.Given("The scope shall be calculated from \'18.08.2018\' to \'18.08.2020\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 22
-        testRunner.Then("The weight diff shall be \'0\' kg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 31
+ testRunner.Then("The weight diff shall be \'0\' kg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 32
+ testRunner.And("There must be \'1\' weight records in scope result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();

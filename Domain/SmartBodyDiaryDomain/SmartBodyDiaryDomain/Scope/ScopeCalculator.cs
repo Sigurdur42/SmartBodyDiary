@@ -24,6 +24,8 @@ public class ScopeCalculator
             ? 0.00m
             : data.Last().Weight - data.First().Weight;
 
+        result.Weights = data;
+
         return result;
     }
 }
