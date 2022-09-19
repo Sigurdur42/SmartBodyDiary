@@ -28,9 +28,26 @@ Scenario: JSON can be written and read again
 		| BellyPlus5  | 33.00  |
 		| BellyMinus5 | 33.00  |
 		| Hip         | 33.00  |
+	And These daily goals shall be used on '01.01.2022'
+		| Goal    | Reached |
+		| Neat    | Reached |
+		| Sleep   | Unknown |
+		| Macros  | Missed  |
+		| Kcal    | Reached |
+		| Protein | Unknown |
+
+	And These daily goals shall be used on '01.02.2022'
+		| Goal    | Reached |
+		| Neat    | Reached |
+		| Sleep   | Unknown |
+		| Macros  | Missed  |
+		| Kcal    | Reached |
+		| Protein | Unknown |
+
 	And The data is written to JSON
 	And The data is read from JSON
 	Then The previous existing weight records shall be read
 	Then The previous existing gym session records shall be read
 	Then The previous existing challenge record shall be read
 	Then The previous existing body data record shall be read
+	Then The previous existing daily goals record shall be read

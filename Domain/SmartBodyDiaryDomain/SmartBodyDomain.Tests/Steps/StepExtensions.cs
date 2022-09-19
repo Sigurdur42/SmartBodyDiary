@@ -9,6 +9,7 @@ public static class StepExtensions
     public static readonly CultureInfo German = new("de-DE");
     public static readonly CultureInfo English = new("en-US");
 
+    private static readonly Dictionary<string, Goal> _goalValues = Enum.GetValues<Goal>().ToDictionary(_ => _.ToString().ToLowerInvariant());
     private static readonly Dictionary<string, GymProgress> _progressValues = Enum.GetValues<GymProgress>().ToDictionary(_ => _.ToString().ToLowerInvariant());
 
     public static DateOnly ToDateOnlyDE(this string input)
@@ -41,6 +42,10 @@ public static class StepExtensions
                     value = row[1].ToDateOnlyDE();
                     break;
 
+                case "goal":
+                    value = row[1].ToGoal();
+                    break;
+
                 default:
                     throw new InvalidCastException($"unexpected type '{propertyType}'");
             }
@@ -52,4 +57,7 @@ public static class StepExtensions
 
     public static GymProgress ToGymProgress(this string input)
         => _progressValues[input.ToLowerInvariant()];
+
+    public static Goal ToGoal(this string input)
+          => _goalValues[input.ToLowerInvariant()];
 }

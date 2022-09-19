@@ -1,5 +1,8 @@
-﻿namespace SmartBodyDiaryDomain;
+﻿using System.Diagnostics;
 
+namespace SmartBodyDiaryDomain;
+
+[DebuggerDisplay("{Day} - {Weight}kg")]
 public class DiaryWeight : IDateRecord
 {
     public DiaryWeight()

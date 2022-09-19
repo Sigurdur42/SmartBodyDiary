@@ -98,4 +98,20 @@ public class SbdJsonPersistenceSteps
         result.FillFromReflection(table);
         _containerToBeUsed.BodyData = new[] { result };
     }
+
+    [When(@"These daily goals shall be used on '([^']*)'")]
+    public void WhenTheseDailyGoalsShallBeUsedOn(DateOnly day, Table table)
+    {
+        var result = new DailyGoals(day);
+        result.FillFromReflection(table);
+        _containerToBeUsed.DailyGoals = _containerToBeUsed.DailyGoals.Union(new[] { result }).ToArray();
+    }
+
+    [Then(@"The previous existing daily goals record shall be read")]
+    public void ThenThePreviousExistingDailyGoalsRecordShallBeRead()
+    {
+        _containerDeserialized.DailyGoals
+            .OrderBy(_ => _.Day)
+            .Should().BeEquivalentTo(_containerToBeUsed.DailyGoals.OrderBy(_ => _.Day));
+    }
 }

@@ -1,4 +1,5 @@
-﻿using SmartBodyDiaryDomain;
+﻿using System.Diagnostics;
+using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain;
 
@@ -9,6 +10,7 @@ public enum GymProgress
     Deload,
 }
 
+[DebuggerDisplay("{Day} - {Progress}")]
 public class GymSession : IDateRecord
 {
     public GymSession()
