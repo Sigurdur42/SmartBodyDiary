@@ -16,7 +16,10 @@ public class SbdCalculatedScopeSteps
     [Given(@"The scope shall be calculated from '(.*)' to '(.*)'")]
     public void GivenTheScopeShallBeCalculatedFromTo(DateOnly startDate, DateOnly endDate)
     {
-        var calculator = new ScopeCalculator(_context.SlidingWeightRepository);
+        var calculator = new ScopeCalculator(
+            _context.SlidingWeightRepository,
+            _context.GymSessionRepository);
+        
         _context.LastCalculatedScope = calculator.Calculate(startDate, endDate);
     }
 
@@ -51,4 +54,9 @@ public class SbdCalculatedScopeSteps
         _context.LastCalculatedScope.WeightDiffSliding.Should().Be(slidingWeightDiff);
     }
 
+    [Then(@"There must be '([^']*)' gym sessions in scope result")]
+    public void AndThereMustbeXGymSessions(int numberOfGymSessions)
+    {
+        _context.LastCalculatedScope.GymSessions.Length.Should().Be(numberOfGymSessions);
+    }
 }

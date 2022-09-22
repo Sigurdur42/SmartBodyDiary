@@ -10,6 +10,7 @@ public class SbdScenarioContext
     public SdbDateBasedRepository<Challenge> ChallengeRepository { get; set; } = new();
     public Challenge Challenge { get; set; } = new();
     public SdbDateBasedRepository<DiaryWeight> WeightRepository { get; set; } = new();
+    public SdbDateBasedRepository<GymSession> GymSessionRepository { get; set; } = new();
 
     public List<DiaryWeight> AvailableWeights { get; set; } = new();
 

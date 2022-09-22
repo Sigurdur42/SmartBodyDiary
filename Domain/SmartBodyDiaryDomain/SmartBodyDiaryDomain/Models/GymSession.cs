@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
-using SmartBodyDiaryDomain;
 
-namespace SmartBodyDomain;
+namespace SmartBodyDiaryDomain;
 
 public enum GymProgress
 {

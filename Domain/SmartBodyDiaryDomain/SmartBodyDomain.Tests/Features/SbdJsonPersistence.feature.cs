@@ -103,104 +103,83 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.Given("The DiaryWeight JSON persistence is create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table21 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Weight"});
-                table21.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "25.08.2022",
                             "83.00"});
-                table21.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "26.08.2022",
                             "82.00"});
-                table21.AddRow(new string[] {
+                table22.AddRow(new string[] {
                             "27.08.2022",
                             "85.00"});
 #line 5
- testRunner.When("These DiaryWeight records shall be used", ((string)(null)), table21, "When ");
+ testRunner.When("These DiaryWeight records shall be used", ((string)(null)), table22, "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
                             "Progress"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "25.08.2022",
                             "Normal"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "26.08.2022",
                             "Progress"});
-                table22.AddRow(new string[] {
+                table23.AddRow(new string[] {
                             "27.08.2022",
                             "Deload"});
 #line 10
- testRunner.And("These GymSession records shall be used", ((string)(null)), table22, "And ");
+ testRunner.And("These GymSession records shall be used", ((string)(null)), table23, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
                             "Property",
                             "value"});
-                table23.AddRow(new string[] {
+                table24.AddRow(new string[] {
                             "Start",
                             "01.01.2022"});
-                table23.AddRow(new string[] {
+                table24.AddRow(new string[] {
                             "End",
                             "31.03.2022"});
 #line 15
- testRunner.And("This challenge record is to be used on \'01.01.2022\'", ((string)(null)), table23, "And ");
+ testRunner.And("This challenge record is to be used on \'01.01.2022\'", ((string)(null)), table24, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
                             "Area",
                             "Length"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "LeftArm",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "RightArm",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "LeftLeg",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "RightLeg",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Shoulder",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Chest",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Belly",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "BellyPlus5",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "BellyMinus5",
                             "33.00"});
-                table24.AddRow(new string[] {
+                table25.AddRow(new string[] {
                             "Hip",
                             "33.00"});
 #line 19
- testRunner.And("This body data is to be used on \'01.01.2021\'", ((string)(null)), table24, "And ");
-#line hidden
-                TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Goal",
-                            "Reached"});
-                table25.AddRow(new string[] {
-                            "Neat",
-                            "Reached"});
-                table25.AddRow(new string[] {
-                            "Sleep",
-                            "Unknown"});
-                table25.AddRow(new string[] {
-                            "Macros",
-                            "Missed"});
-                table25.AddRow(new string[] {
-                            "Kcal",
-                            "Reached"});
-                table25.AddRow(new string[] {
-                            "Protein",
-                            "Unknown"});
-#line 31
- testRunner.And("These daily goals shall be used on \'01.01.2022\'", ((string)(null)), table25, "And ");
+ testRunner.And("This body data is to be used on \'01.01.2021\'", ((string)(null)), table25, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
                             "Goal",
@@ -220,8 +199,29 @@ this.ScenarioInitialize(scenarioInfo);
                 table26.AddRow(new string[] {
                             "Protein",
                             "Unknown"});
+#line 31
+ testRunner.And("These daily goals shall be used on \'01.01.2022\'", ((string)(null)), table26, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Goal",
+                            "Reached"});
+                table27.AddRow(new string[] {
+                            "Neat",
+                            "Reached"});
+                table27.AddRow(new string[] {
+                            "Sleep",
+                            "Unknown"});
+                table27.AddRow(new string[] {
+                            "Macros",
+                            "Missed"});
+                table27.AddRow(new string[] {
+                            "Kcal",
+                            "Reached"});
+                table27.AddRow(new string[] {
+                            "Protein",
+                            "Unknown"});
 #line 39
- testRunner.And("These daily goals shall be used on \'01.02.2022\'", ((string)(null)), table26, "And ");
+ testRunner.And("These daily goals shall be used on \'01.02.2022\'", ((string)(null)), table27, "And ");
 #line hidden
 #line 47
  testRunner.And("The data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
