@@ -81,7 +81,7 @@ namespace SmartBodyDomain.Tests.Features
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("JSON can be written and read again", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 3
-this.ScenarioInitialize(scenarioInfo);
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -101,7 +101,7 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 4
- testRunner.Given("The DiaryWeight JSON persistence is create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+        testRunner.Given("The DiaryWeight JSON persistence is create", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table22 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -116,7 +116,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "27.08.2022",
                             "85.00"});
 #line 5
- testRunner.When("These DiaryWeight records shall be used", ((string)(null)), table22, "When ");
+        testRunner.When("These DiaryWeight records shall be used", ((string)(null)), table22, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table23 = new TechTalk.SpecFlow.Table(new string[] {
                             "Day",
@@ -131,7 +131,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "27.08.2022",
                             "Deload"});
 #line 10
- testRunner.And("These GymSession records shall be used", ((string)(null)), table23, "And ");
+        testRunner.And("These GymSession records shall be used", ((string)(null)), table23, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table24 = new TechTalk.SpecFlow.Table(new string[] {
                             "Property",
@@ -143,7 +143,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "End",
                             "31.03.2022"});
 #line 15
- testRunner.And("This challenge record is to be used on \'01.01.2022\'", ((string)(null)), table24, "And ");
+        testRunner.And("This challenge record is to be used on \'01.01.2022\'", ((string)(null)), table24, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table25 = new TechTalk.SpecFlow.Table(new string[] {
                             "Area",
@@ -179,70 +179,52 @@ this.ScenarioInitialize(scenarioInfo);
                             "Hip",
                             "33.00"});
 #line 19
- testRunner.And("This body data is to be used on \'01.01.2021\'", ((string)(null)), table25, "And ");
+        testRunner.And("This body data is to be used on \'01.01.2021\'", ((string)(null)), table25, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table26 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Goal",
-                            "Reached"});
-                table26.AddRow(new string[] {
+                            "Day",
                             "Neat",
-                            "Reached"});
-                table26.AddRow(new string[] {
                             "Sleep",
-                            "Unknown"});
-                table26.AddRow(new string[] {
                             "Macros",
-                            "Missed"});
-                table26.AddRow(new string[] {
                             "Kcal",
-                            "Reached"});
+                            "Protein"});
                 table26.AddRow(new string[] {
-                            "Protein",
+                            "01.01.2022",
+                            "Reached",
+                            "Unknown",
+                            "Missed",
+                            "Reached",
                             "Unknown"});
-#line 31
- testRunner.And("These daily goals shall be used on \'01.01.2022\'", ((string)(null)), table26, "And ");
+                table26.AddRow(new string[] {
+                            "01.02.2022",
+                            "Reached",
+                            "Unknown",
+                            "Missed",
+                            "Reached",
+                            "Unknown"});
+#line 32
+        testRunner.And("These daily goals shall be used", ((string)(null)), table26, "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table27 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Goal",
-                            "Reached"});
-                table27.AddRow(new string[] {
-                            "Neat",
-                            "Reached"});
-                table27.AddRow(new string[] {
-                            "Sleep",
-                            "Unknown"});
-                table27.AddRow(new string[] {
-                            "Macros",
-                            "Missed"});
-                table27.AddRow(new string[] {
-                            "Kcal",
-                            "Reached"});
-                table27.AddRow(new string[] {
-                            "Protein",
-                            "Unknown"});
+#line 37
+        testRunner.And("The data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 38
+        testRunner.And("The data is read from JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 39
- testRunner.And("These daily goals shall be used on \'01.02.2022\'", ((string)(null)), table27, "And ");
+        testRunner.Then("The previous existing weight records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 47
- testRunner.And("The data is written to JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 40
+        testRunner.Then("The previous existing gym session records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 48
- testRunner.And("The data is read from JSON", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 41
+        testRunner.Then("The previous existing challenge record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 49
- testRunner.Then("The previous existing weight records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 42
+        testRunner.Then("The previous existing body data record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 50
- testRunner.Then("The previous existing gym session records shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 51
- testRunner.Then("The previous existing challenge record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 52
- testRunner.Then("The previous existing body data record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 53
- testRunner.Then("The previous existing daily goals record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 43
+        testRunner.Then("The previous existing daily goals record shall be read", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

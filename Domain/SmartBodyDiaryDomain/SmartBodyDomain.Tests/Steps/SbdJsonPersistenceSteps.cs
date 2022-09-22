@@ -114,4 +114,10 @@ public class SbdJsonPersistenceSteps
             .OrderBy(_ => _.Day)
             .Should().BeEquivalentTo(_containerToBeUsed.DailyGoals.OrderBy(_ => _.Day));
     }
+
+    [When(@"These daily goals shall be used")]
+    public void WhenTheseDailyGoalsShallBeUsed(IEnumerable<DailyGoals> dailyGoals)
+    {
+        _containerToBeUsed.DailyGoals = dailyGoals.ToArray();
+    }
 }
