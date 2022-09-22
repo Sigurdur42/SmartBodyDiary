@@ -112,14 +112,14 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Property",
                             "value"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Title",
                             "Test Challenge"});
 #line 7
- testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table4, "Given ");
+ testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table5, "Given ");
 #line hidden
 #line 11
  testRunner.And("the current challenge is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -161,17 +161,17 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Property",
                             "value"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Start",
                             "01.01.2022"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "End",
                             "31.03.2022"});
 #line 16
- testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table5, "Given ");
+ testRunner.Given("This challenge data is to be used on \'01.01.2022\'", ((string)(null)), table6, "Given ");
 #line hidden
 #line 21
  testRunner.Then("IsActive shall be \'true\' on \'01.01.2022\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

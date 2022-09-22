@@ -7,8 +7,8 @@ namespace SmartBodyDomain.Tests;
 [Binding]
 public class SbdJsonPersistenceSteps
 {
-    private readonly PersistenceContainer _containerToBeUsed = new PersistenceContainer();
-    private PersistenceContainer _containerDeserialized = new PersistenceContainer();
+    private readonly PersistenceContainer _containerToBeUsed = new();
+    private PersistenceContainer _containerDeserialized = new();
 
     private JsonPersistence _persistence = new();
     private string _serializedJson = "";

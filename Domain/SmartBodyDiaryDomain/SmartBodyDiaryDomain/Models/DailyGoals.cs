@@ -13,12 +13,16 @@ namespace SmartBodyDomain
     [DebuggerDisplay("{Day} - Kcal:{Kcal} Macros:{Macros} Protein:{Protein} Neat:{Neat} Sleep:{Sleep}")]
     public class DailyGoals : IDateRecord
     {
+        public DailyGoals()
+        {
+        }
+
         public DailyGoals(DateOnly day)
         {
             Day = day;
         }
 
-        public DateOnly Day { get; }
+        public DateOnly Day { get; init; }
         public Goal Kcal { get; set; } = Goal.Unknown;
         public Goal Macros { get; set; } = Goal.Unknown;
         public Goal Protein { get; set; } = Goal.Unknown;

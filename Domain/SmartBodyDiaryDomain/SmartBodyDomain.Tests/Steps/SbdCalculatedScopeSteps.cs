@@ -59,4 +59,17 @@ public class SbdCalculatedScopeSteps
     {
         _context.LastCalculatedScope.GymSessions.Length.Should().Be(numberOfGymSessions);
     }
+
+    [Given(@"These daily goals shall be used")]
+    public void GivenTheseDailyGoalsShallBeUsed(IEnumerable<DailyGoals> dailyGoals)
+    {
+        _context.DailyGoalsRepository.AddOrUpdateRange(dailyGoals.ToArray());
+    }
+
+    [Then(@"There must be '(.*)' daily goals in scope result")]
+    public void ThenThereMustBeDailyGoalsInScopeResult(int numberOfGoals)
+    {
+        // TODO: Summarized values
+        throw new NotImplementedException();
+    }
 }
