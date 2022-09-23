@@ -20,9 +20,9 @@
           | 2020-08-20 | Progress    |                 |
           | 2020-08-26 | Progress    | Not in week 1   |
         And These daily goals shall be used
-          | Day        | Neat    | Sleep   | Macros | Kcal    | Protein |
-          | 01.01.2022 | Reached | Unknown | Missed | Reached | Unknown |
-          | 01.02.2022 | Reached | Unknown | Missed | Reached | Unknown |
+          | Day        | Neat    | Sleep   | Macros | Kcal    | Protein | Comment      |
+          | 18.08.2020 | Reached | Unknown | Missed | Reached | Missed  | Start week 1 |
+          | 25.08.2020 | Reached | Unknown | Missed | Reached | Reached | End week 1   |
         And The given data is set in the repository
         And The sliding weight has been calculated
 
@@ -32,7 +32,9 @@
         Then The sliding weight diff shall be '1.56' kg
         And There must be '7' weight records in scope result
         And There must be '3' gym sessions in scope result
-        And There must be '2' daily goals in scope result
+        And There must be this daily goal summary
+          | Neat | Sleep | Macros | Kcal | Protein |
+          | 2/0  | 0/0   | 0/2    | 2/0  | 1/1     |
 
     Scenario: Calculate weekly scope when no data is present
         Given The scope shall be calculated from '18.08.2018' to '25.08.2018'
@@ -40,7 +42,9 @@
         Then The sliding weight diff shall be '0' kg
         And There must be '0' weight records in scope result
         And There must be '0' gym sessions in scope result
-        And There must be '0' daily goals in scope result
+        And There must be this daily goal summary
+          | Neat | Sleep | Macros | Kcal | Protein |
+          | 0/0  | 0/0   | 0/0    | 0/0  | 0/0     |
 
     Scenario: Calculate weekly scope when a single data point is present
         Given The scope shall be calculated from '18.08.2018' to '18.08.2020'
@@ -48,4 +52,6 @@
         Then The sliding weight diff shall be '0' kg
         And There must be '1' weight records in scope result
         And There must be '1' gym sessions in scope result
-        And There must be '1' daily goals in scope result
+        And There must be this daily goal summary
+          | Neat | Sleep | Macros | Kcal | Protein |
+          | 1/0  | 0/0   | 0/1    | 1/0  | 0/1     |

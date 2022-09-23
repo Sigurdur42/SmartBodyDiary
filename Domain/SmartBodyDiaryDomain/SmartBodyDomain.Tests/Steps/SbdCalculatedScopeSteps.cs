@@ -1,4 +1,5 @@
 ﻿using FluentAssertions;
+using NUnit.Framework;
 using SmartBodyDiaryDomain;
 
 namespace SmartBodyDomain.Tests.Steps;
@@ -18,8 +19,9 @@ public class SbdCalculatedScopeSteps
     {
         var calculator = new ScopeCalculator(
             _context.SlidingWeightRepository,
-            _context.GymSessionRepository);
-        
+            _context.GymSessionRepository,
+            _context.DailyGoalsRepository);
+
         _context.LastCalculatedScope = calculator.Calculate(startDate, endDate);
     }
 
@@ -66,10 +68,9 @@ public class SbdCalculatedScopeSteps
         _context.DailyGoalsRepository.AddOrUpdateRange(dailyGoals.ToArray());
     }
 
-    [Then(@"There must be '(.*)' daily goals in scope result")]
-    public void ThenThereMustBeDailyGoalsInScopeResult(int numberOfGoals)
+    [Then(@"There must be this daily goal summary")]
+    public void ThenThereMustBeThisDailyGoalSummary(DailyGoalsSummary dailyGoalSummary)
     {
-        // TODO: Summarized values
-        throw new NotImplementedException();
+        _context.LastCalculatedScope.DailyGoals.Should().Be(dailyGoalSummary);
     }
 }
