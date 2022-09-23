@@ -8,15 +8,15 @@ public class DailyGoalsSummary
     {
     }
 
-    public DailyGoalsSummary(IEnumerable<DailyGoals> goals)
+    public DailyGoalsSummary(IEnumerable<DailyGoals> goals, int targetDays)
     {
         foreach (var goal in goals)
         {
-            Assign(Kcal, goal.Kcal);
-            Assign(Neat, goal.Neat);
-            Assign(Sleep, goal.Sleep);
-            Assign(Protein, goal.Protein);
-            Assign(Macros, goal.Macros);
+            Assign(Kcal, goal.Kcal, targetDays);
+            Assign(Neat, goal.Neat, targetDays);
+            Assign(Sleep, goal.Sleep, targetDays);
+            Assign(Protein, goal.Protein, targetDays);
+            Assign(Macros, goal.Macros, targetDays);
         }
     }
 
@@ -45,8 +45,9 @@ public class DailyGoalsSummary
         return HashCode.Combine(Kcal, Neat, Sleep, Protein, Macros);
     }
 
-    private void Assign(SingleGoalSummary target, Goal goal)
+    private void Assign(SingleGoalSummary target, Goal goal, int targetDays)
     {
+        target.Target = targetDays;
         target.Missed += goal == Goal.Missed ? 1 : 0;
         target.Reached += goal == Goal.Reached ? 1 : 0;
     }

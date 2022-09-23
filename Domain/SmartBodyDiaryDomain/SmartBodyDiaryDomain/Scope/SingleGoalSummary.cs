@@ -7,13 +7,15 @@ public class SingleGoalSummary
 {
     public int Reached { get; internal set; }
     public int Missed { get; internal set; }
+    public int Target { get; internal set; }
 
     public override bool Equals(object? obj)
     {
         if (obj is SingleGoalSummary rhs)
         {
             return Reached.Equals(rhs.Reached)
-                   && Missed.Equals(rhs.Missed);
+                   && Missed.Equals(rhs.Missed)
+                   && Target.Equals(rhs.Target);
         }
 
         return base.Equals(obj);
@@ -21,6 +23,6 @@ public class SingleGoalSummary
 
     public override int GetHashCode()
     {
-        return HashCode.Combine(Reached, Missed);
+        return HashCode.Combine(Reached, Missed, Target);
     }
 }

@@ -43,7 +43,8 @@ public class ScopeCalculator
             .OrderBy(_ => _.Day)
             .ToArray();
 
-        result.DailyGoals = new DailyGoalsSummary(_dailyGoalsRepository.GetAllData().Where(_ => _.Day >= startDate && _.Day <= endDate));
+        var goalTargetDays = (endDate.ToDateTime(new TimeOnly()) - startDate.ToDateTime(new TimeOnly())).Days;
+        result.DailyGoals = new DailyGoalsSummary(_dailyGoalsRepository.GetAllData().Where(_ => _.Day >= startDate && _.Day <= endDate), goalTargetDays);
 
         return result;
     }

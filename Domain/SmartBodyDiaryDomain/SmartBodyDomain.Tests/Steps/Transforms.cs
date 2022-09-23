@@ -81,8 +81,9 @@ public class Transforms
         var parts = input.Split('/').Select(_ => _.Trim()).ToArray();
         return new SingleGoalSummary()
         {
-            Reached = int.Parse(parts[0]),
-            Missed = int.Parse(parts[1])
+            Target = int.Parse(parts[0]),
+            Reached = int.Parse(parts[1]),
+            Missed = int.Parse(parts[2])
         };
     }
 }

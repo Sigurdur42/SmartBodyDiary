@@ -33,8 +33,8 @@
         And There must be '7' weight records in scope result
         And There must be '3' gym sessions in scope result
         And There must be this daily goal summary
-          | Neat | Sleep | Macros | Kcal | Protein |
-          | 2/0  | 0/0   | 0/2    | 2/0  | 1/1     |
+          | Neat  | Sleep | Macros | Kcal  | Protein |
+          | 7/2/0 | 7/0/0 | 7/0/2  | 7/2/0 | 7/1/1   |
 
     Scenario: Calculate weekly scope when no data is present
         Given The scope shall be calculated from '18.08.2018' to '25.08.2018'
@@ -43,8 +43,8 @@
         And There must be '0' weight records in scope result
         And There must be '0' gym sessions in scope result
         And There must be this daily goal summary
-          | Neat | Sleep | Macros | Kcal | Protein |
-          | 0/0  | 0/0   | 0/0    | 0/0  | 0/0     |
+          | Neat  | Sleep | Macros | Kcal  | Protein |
+          | 0/0/0 | 0/0/0 | 0/0/0  | 0/0/0 | 0/0/0   |
 
     Scenario: Calculate weekly scope when a single data point is present
         Given The scope shall be calculated from '18.08.2018' to '18.08.2020'
@@ -53,5 +53,5 @@
         And There must be '1' weight records in scope result
         And There must be '1' gym sessions in scope result
         And There must be this daily goal summary
-          | Neat | Sleep | Macros | Kcal | Protein |
-          | 1/0  | 0/0   | 0/1    | 1/0  | 0/1     |
+          | Neat    | Sleep   | Macros  | Kcal    | Protein |
+          | 731/1/0 | 731/0/0 | 731/0/1 | 731/1/0 | 731/0/1 |

@@ -233,11 +233,11 @@ namespace SmartBodyDomain.Tests.Features
                             "Kcal",
                             "Protein"});
                 table5.AddRow(new string[] {
-                            "2/0",
-                            "0/0",
-                            "0/2",
-                            "2/0",
-                            "1/1"});
+                            "7/2/0",
+                            "7/0/0",
+                            "7/0/2",
+                            "7/2/0",
+                            "7/1/1"});
 #line 35
         testRunner.And("There must be this daily goal summary", ((string)(null)), table5, "And ");
 #line hidden
@@ -297,11 +297,11 @@ namespace SmartBodyDomain.Tests.Features
                             "Kcal",
                             "Protein"});
                 table6.AddRow(new string[] {
-                            "0/0",
-                            "0/0",
-                            "0/0",
-                            "0/0",
-                            "0/0"});
+                            "0/0/0",
+                            "0/0/0",
+                            "0/0/0",
+                            "0/0/0",
+                            "0/0/0"});
 #line 45
         testRunner.And("There must be this daily goal summary", ((string)(null)), table6, "And ");
 #line hidden
@@ -361,11 +361,11 @@ namespace SmartBodyDomain.Tests.Features
                             "Kcal",
                             "Protein"});
                 table7.AddRow(new string[] {
-                            "1/0",
-                            "0/0",
-                            "0/1",
-                            "1/0",
-                            "0/1"});
+                            "731/1/0",
+                            "731/0/0",
+                            "731/0/1",
+                            "731/1/0",
+                            "731/0/1"});
 #line 55
         testRunner.And("There must be this daily goal summary", ((string)(null)), table7, "And ");
 #line hidden
