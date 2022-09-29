@@ -20,22 +20,22 @@ namespace SmartBodyDomain.Tests.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("SbdBodyMeasurementRepository - Verifies body measurement functionality")]
-    public partial class SbdBodyMeasurementRepository_VerifiesBodyMeasurementFunctionalityFeature
+    [NUnit.Framework.DescriptionAttribute("Import Fit&Lift data")]
+    public partial class ImportFitLiftDataFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
         
-#line 1 "SbdBodyMeasurement.feature"
+#line 1 "ImportFitAndLift.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "SbdBodyMeasurementRepository - Verifies body measurement functionality", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Import Fit&Lift data", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -73,24 +73,15 @@ namespace SmartBodyDomain.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 3
-#line hidden
-#line 4
- testRunner.Given("An empty body measurement repository has been initialized", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add body data to repository")]
-        public virtual void AddBodyDataToRepository()
+        [NUnit.Framework.DescriptionAttribute("Import actual data from myself")]
+        public virtual void ImportActualDataFromMyself()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add body data to repository", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 6
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Import actual data from myself", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+#line 3
+    this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
             bool isFeatureIgnored = default(bool);
@@ -109,50 +100,74 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 3
-this.FeatureBackground();
+#line 4
+        testRunner.Given("The file \'FitAndLift.2022-09-29.yaml\' is imported from FitAndLift", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Area",
-                            "Length"});
-                table2.AddRow(new string[] {
-                            "LeftArm",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "RightArm",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "LeftLeg",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "RightLeg",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "Shoulder",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "Chest",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "Belly",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "BellyPlus5",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "BellyMinus5",
-                            "33.00"});
-                table2.AddRow(new string[] {
-                            "Hip",
-                            "33.00"});
-#line 7
- testRunner.Given("This data has been measured at \'01.01.2021\'", ((string)(null)), table2, "Given ");
+#line 5
+        testRunner.Then("Loading the import data was successful", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 20
- testRunner.And("The measured body data is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 21
- testRunner.Then("Exactly \'1\' body data record is in the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Weight",
+                            "GymSession",
+                            "NeatGoal",
+                            "KcalGoal",
+                            "MacroGoal",
+                            "SleepGoal",
+                            "ProteinGoal",
+                            "Comment"});
+                table1.AddRow(new string[] {
+                            "22.06.2022",
+                            "",
+                            "",
+                            "Reached",
+                            "",
+                            "",
+                            "Reached",
+                            "",
+                            ""});
+                table1.AddRow(new string[] {
+                            "23.05.2022",
+                            "81.95",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""});
+                table1.AddRow(new string[] {
+                            "22.05.2022",
+                            "82.15",
+                            "Progress",
+                            "Reached",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""});
+                table1.AddRow(new string[] {
+                            "21.03.2022",
+                            "77.65",
+                            "",
+                            "Reached",
+                            "Missed",
+                            "Reached",
+                            "Reached",
+                            "Reached",
+                            ""});
+                table1.AddRow(new string[] {
+                            "19.03.2022",
+                            "78.05",
+                            "",
+                            "Reached",
+                            "Reached",
+                            "Reached",
+                            "Reached",
+                            "Reached",
+                            ""});
+#line 6
+        testRunner.Then("This diary data is found", ((string)(null)), table1, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

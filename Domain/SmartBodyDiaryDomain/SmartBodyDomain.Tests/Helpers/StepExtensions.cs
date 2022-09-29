@@ -13,9 +13,10 @@ public static class StepExtensions
     private static readonly Dictionary<string, GymProgress> _progressValues = Enum.GetValues<GymProgress>().ToDictionary(_ => _.ToString().ToLowerInvariant());
 
     public static DateOnly ToDateOnlyDE(this string input)
-    {
-        return DateOnly.Parse(input, German);
-    }
+        => DateOnly.Parse(input, German);
+
+    public static decimal ToDecimalDE(this string input)
+        => decimal.Parse(input, German);
 
     public static void FillFromReflection(this IDateRecord record, Table table)
     {
@@ -59,5 +60,22 @@ public static class StepExtensions
         => _progressValues[input.ToLowerInvariant()];
 
     public static Goal ToGoal(this string input)
-          => _goalValues[input.ToLowerInvariant()];
+        => string.IsNullOrWhiteSpace(input)
+            ? Goal.Unknown
+            : _goalValues[input.ToLowerInvariant()];
+
+    public static T? FindByDate<T>(this IEnumerable<T> records, DateOnly date, bool expectedToFindRecord) where T : IDateRecord
+    {
+        var found = records.FirstOrDefault(_ => _.Day == date);
+        if (!expectedToFindRecord)
+        {
+            found.Should().BeNull($"Do not expect record for {date} ({typeof(T)})");
+        }
+        else
+        {
+            found.Should().NotBeNull($"Cannot find record for {date} ({typeof(T)})");
+        }
+
+        return found;
+    }
 }

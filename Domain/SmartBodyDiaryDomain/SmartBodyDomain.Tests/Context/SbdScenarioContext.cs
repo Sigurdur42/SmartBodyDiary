@@ -1,4 +1,5 @@
 ﻿using SmartBodyDiaryDomain;
+using SmartBodyDiaryDomain.Import;
 
 namespace SmartBodyDomain.Tests;
 
@@ -18,4 +19,5 @@ public class SbdScenarioContext
 
     public SlidingWeightRepository SlidingWeightRepository { get; set; } = new();
     public ISbdWeightService? AverageWeightService { get; set; }
+    public ImportResult FitAndLiftImportResult { get; set; } = new();
 }

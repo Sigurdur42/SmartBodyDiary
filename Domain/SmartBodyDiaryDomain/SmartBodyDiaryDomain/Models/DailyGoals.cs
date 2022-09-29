@@ -28,5 +28,10 @@ namespace SmartBodyDomain
         public Goal Protein { get; set; } = Goal.Unknown;
         public Goal Neat { get; set; } = Goal.Unknown;
         public Goal Sleep { get; set; } = Goal.Unknown;
+
+        public bool AllUnknown
+            => Kcal == Goal.Unknown && Macros == Goal.Unknown
+                                    && Protein == Goal.Unknown && Neat == Goal.Unknown
+                                    && Sleep == Goal.Unknown;
     }
 }
