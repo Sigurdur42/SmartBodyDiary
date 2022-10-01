@@ -112,41 +112,41 @@ this.ScenarioInitialize(scenarioInfo);
 #line 3
 this.FeatureBackground();
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Area",
                             "Length"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "LeftArm",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "RightArm",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "LeftLeg",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "RightLeg",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Shoulder",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Chest",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Belly",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "BellyPlus5",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "BellyMinus5",
                             "33.00"});
-                table2.AddRow(new string[] {
+                table3.AddRow(new string[] {
                             "Hip",
                             "33.00"});
 #line 7
- testRunner.Given("This data has been measured at \'01.01.2021\'", ((string)(null)), table2, "Given ");
+ testRunner.Given("This data has been measured at \'01.01.2021\'", ((string)(null)), table3, "Given ");
 #line hidden
 #line 20
  testRunner.And("The measured body data is added to the repository", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

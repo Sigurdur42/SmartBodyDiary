@@ -16,7 +16,6 @@ public class FitAndLiftImport
         }
 
         var content = File.ReadAllText(fileInfo.FullName);
-
         return Import(content);
     }
 
@@ -58,6 +57,14 @@ public class FitAndLiftImport
             .Where(_ => !_.AllUnknown)
             .ToArray();
 
+        result.Challenges = readData.ChallengeModels
+            .Select(_ => new Challenge(_.StartOnly)
+            {
+                Start = _.StartOnly,
+                End = _.EndOnly,
+                Title = _.Name,
+            })
+            .ToArray();
         result.Success = true;
         return result;
     }
@@ -74,6 +81,37 @@ public class FitAndLiftImport
     private class ImportedData
     {
         public WeightRecord[] WeightRecords { get; set; } = Array.Empty<WeightRecord>();
+        public ChallengeRecord[] ChallengeModels { get; set; } = Array.Empty<ChallengeRecord>();
+    }
+
+    // ReSharper disable once ClassNeverInstantiated.Local
+    private class ChallengeRecord
+    {
+        private static readonly CultureInfo _german = new("De-de");
+        private DateOnly? _startOnly;
+        private DateOnly? _endOnly;
+
+        public string Start { get; set; } = "";
+        public string End { get; set; } = "";
+        public string Name { get; set; } = "";
+
+        public DateOnly StartOnly
+        {
+            get
+            {
+                _startOnly ??= DateOnly.Parse(Start, _german);
+                return _startOnly.Value;
+            }
+        }
+
+        public DateOnly EndOnly
+        {
+            get
+            {
+                _endOnly ??= DateOnly.Parse(End, _german);
+                return _endOnly.Value;
+            }
+        }
     }
 
     // ReSharper disable once ClassNeverInstantiated.Local

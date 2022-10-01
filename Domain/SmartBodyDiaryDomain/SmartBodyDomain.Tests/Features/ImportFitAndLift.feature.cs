@@ -169,6 +169,27 @@ namespace SmartBodyDomain.Tests.Features
 #line 6
         testRunner.Then("This diary data is found", ((string)(null)), table1, "Then ");
 #line hidden
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "Title",
+                            "Start",
+                            "End",
+                            "Comment"});
+                table2.AddRow(new string[] {
+                            "29.08.2021",
+                            "90 Tage (Melanie)",
+                            "29.08.2021",
+                            "27.11.2021",
+                            ""});
+                table2.AddRow(new string[] {
+                            "31.12.2021",
+                            "Meine dritte Challenge",
+                            "31.12.2021",
+                            "31.03.2022",
+                            ""});
+#line 13
+          testRunner.Then("This challenge data is found", ((string)(null)), table2, "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

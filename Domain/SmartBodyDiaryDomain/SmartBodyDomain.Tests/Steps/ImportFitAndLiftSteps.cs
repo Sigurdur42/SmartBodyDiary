@@ -32,20 +32,20 @@ public class ImportFitAndLiftSteps
             var date = row["Day"].ToDateOnlyDE();
 
             var weightRecord = _context.FitAndLiftImportResult.Weights.FindByDate(date, !string.IsNullOrWhiteSpace(expectedWeight));
-            weightRecord?.Weight.Should().Be(expectedWeight.ToDecimalDE(),$"Day: {date}");
+            weightRecord?.Weight.Should().Be(expectedWeight.ToDecimalDE(), $"Day: {date}");
 
             var gymRecord = _context.FitAndLiftImportResult.GymSessions.FindByDate(date, !string.IsNullOrWhiteSpace(expectedGym));
             gymRecord?.Progress.Should().Be(expectedGym.ToGymProgress(), $"Day: {date}");
 
-            var anyGoalExpected = !string.IsNullOrWhiteSpace(expectedNeat) || !string.IsNullOrWhiteSpace(expectedKcal) || !string.IsNullOrWhiteSpace(expectedMacro) || !string.IsNullOrWhiteSpace(expectedKcal) || !string.IsNullOrWhiteSpace(expectedSleep); 
+            var anyGoalExpected = !string.IsNullOrWhiteSpace(expectedNeat) || !string.IsNullOrWhiteSpace(expectedKcal) || !string.IsNullOrWhiteSpace(expectedMacro) || !string.IsNullOrWhiteSpace(expectedKcal) || !string.IsNullOrWhiteSpace(expectedSleep);
             var goalRecord = _context.FitAndLiftImportResult.DailyGoals.FindByDate(date, anyGoalExpected);
             if (goalRecord != null)
             {
-                goalRecord.Neat.Should().Be(expectedNeat.ToGoal(),$"Day: {date} Neat");
-                goalRecord.Kcal.Should().Be(expectedKcal.ToGoal(),$"Day: {date} Kcal");
-                goalRecord.Macros.Should().Be(expectedMacro.ToGoal(),$"Day: {date} Macros");
-                goalRecord.Sleep.Should().Be(expectedSleep.ToGoal(),$"Day: {date} Sleep");
-                goalRecord.Protein.Should().Be(expectedProtein.ToGoal(),$"Day: {date} Protein");
+                goalRecord.Neat.Should().Be(expectedNeat.ToGoal(), $"Day: {date} Neat");
+                goalRecord.Kcal.Should().Be(expectedKcal.ToGoal(), $"Day: {date} Kcal");
+                goalRecord.Macros.Should().Be(expectedMacro.ToGoal(), $"Day: {date} Macros");
+                goalRecord.Sleep.Should().Be(expectedSleep.ToGoal(), $"Day: {date} Sleep");
+                goalRecord.Protein.Should().Be(expectedProtein.ToGoal(), $"Day: {date} Protein");
             }
 
             // TODO: body weight
@@ -68,5 +68,23 @@ public class ImportFitAndLiftSteps
     public void ThenLoadingTheImportDataWasSuccessful()
     {
         _context.FitAndLiftImportResult.Success.Should().BeTrue();
+    }
+
+    [Then(@"This challenge data is found")]
+    public void ThenThisChallengeDataIsFound(Table table)
+    {
+        foreach (var row in table.Rows)
+        {
+            var expectedTitle = row["Title"];
+            var expectedStart = row["Start"];
+            var expectedEnd = row["End"];
+
+            var date = row["Day"].ToDateOnlyDE();
+
+            var challengeRecord = _context.FitAndLiftImportResult.Challenges.FindByDate(date, !string.IsNullOrWhiteSpace(expectedStart));
+            challengeRecord?.Start.Should().Be(expectedStart.ToDateOnlyDE(), $"Day: {date}");
+            challengeRecord?.End.Should().Be(expectedEnd.ToDateOnlyDE(), $"Day: {date}");
+            challengeRecord?.Title.Should().Be(expectedTitle, $"Day: {date}");
+        }
     }
 }

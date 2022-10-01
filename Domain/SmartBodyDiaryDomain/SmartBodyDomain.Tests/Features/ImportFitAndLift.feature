@@ -10,3 +10,7 @@
           | 22.05.2022 | 82.15  | Progress   | Reached  |          |           |           |             |         |
           | 21.03.2022 | 77.65  |            | Reached  | Missed   | Reached   | Reached   | Reached     |         |
           | 19.03.2022 | 78.05  |            | Reached  | Reached  | Reached   | Reached   | Reached     |         |
+        Then This challenge data is found
+          | Day        | Title                  | Start      | End        | Comment |
+          | 29.08.2021 | 90 Tage (Melanie)      | 29.08.2021 | 27.11.2021 |         |
+          | 31.12.2021 | Meine dritte Challenge | 31.12.2021 | 31.03.2022 |         |
