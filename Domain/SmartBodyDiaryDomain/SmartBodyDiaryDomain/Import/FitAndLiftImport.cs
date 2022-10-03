@@ -6,6 +6,8 @@ namespace SmartBodyDiaryDomain.Import;
 
 public class FitAndLiftImport
 {
+    private static readonly CultureInfo _german = new("De-de");
+    private static readonly CultureInfo _invariant = CultureInfo.InvariantCulture;
     public ImportResult Import(FileInfo fileInfo)
     {
         var result = new ImportResult();
@@ -65,6 +67,23 @@ public class FitAndLiftImport
                 Title = _.Name,
             })
             .ToArray();
+
+        result.BodyData = readData.BodyRecords
+            .Select(_ => new BodyMeasurement(_.DateOnly)
+            {
+                LeftArm = decimal.Parse(_.ArmLeft, _invariant),
+                RightArm = decimal.Parse(_.ArmRight, _invariant),
+                Belly = decimal.Parse(_.Belly, _invariant),
+                BellyPlus5 = decimal.Parse(_.BellyPlus5, _invariant),
+                BellyMinus5 = decimal.Parse(_.BellyMinus5, _invariant),
+                Chest = decimal.Parse(_.Chest, _invariant),
+                Hip =  decimal.Parse(_.Hip, _invariant),
+                LeftLeg =  decimal.Parse(_.UpperLegLeft, _invariant),
+                RightLeg =  decimal.Parse(_.upperLegRight, _invariant),
+                Shoulder =  decimal.Parse(_.Shoulder, _invariant),
+            })
+            .ToArray();
+
         result.Success = true;
         return result;
     }
@@ -82,6 +101,34 @@ public class FitAndLiftImport
     {
         public WeightRecord[] WeightRecords { get; set; } = Array.Empty<WeightRecord>();
         public ChallengeRecord[] ChallengeModels { get; set; } = Array.Empty<ChallengeRecord>();
+        public BodyRecord[] BodyRecords { get; set; } = Array.Empty<BodyRecord>();
+    }
+
+    private class BodyRecord
+    {
+        private static readonly CultureInfo _german = new("De-de");
+        private DateOnly? _dateOnly;
+
+        public DateOnly DateOnly
+        {
+            get
+            {
+                _dateOnly ??= DateOnly.Parse(Day, _german);
+                return _dateOnly.Value;
+            }
+        }
+
+        public string Day { get; set; } = "";
+        public string ArmLeft { get; set; } = "";
+        public string ArmRight { get; set; } = "";
+        public string UpperLegLeft { get; set; } = "";
+        public string upperLegRight { get; set; } = "";
+        public string Chest { get; set; } = "";
+        public string Hip { get; set; } = "";
+        public string Shoulder { get; set; } = "";
+        public string Belly { get; set; } = "";
+        public string BellyPlus5 { get; set; } = "";
+        public string BellyMinus5 { get; set; } = "";
     }
 
     // ReSharper disable once ClassNeverInstantiated.Local

@@ -188,7 +188,34 @@ namespace SmartBodyDomain.Tests.Features
                             "31.03.2022",
                             ""});
 #line 13
-          testRunner.Then("This challenge data is found", ((string)(null)), table2, "Then ");
+        testRunner.Then("This challenge data is found", ((string)(null)), table2, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Day",
+                            "LeftArm",
+                            "RightArm",
+                            "LeftLeg",
+                            "RightLeg",
+                            "Shoulder",
+                            "Chest",
+                            "Belly",
+                            "BellyPlus5",
+                            "BellyMinus5",
+                            "Hip"});
+                table3.AddRow(new string[] {
+                            "25.09.2022",
+                            "33",
+                            "34.5",
+                            "57",
+                            "59",
+                            "118",
+                            "104",
+                            "94.5",
+                            "90",
+                            "94.5",
+                            "97"});
+#line 17
+        testRunner.Then("This body data is found", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

@@ -14,3 +14,6 @@
           | Day        | Title                  | Start      | End        | Comment |
           | 29.08.2021 | 90 Tage (Melanie)      | 29.08.2021 | 27.11.2021 |         |
           | 31.12.2021 | Meine dritte Challenge | 31.12.2021 | 31.03.2022 |         |
+        Then This body data is found
+          | Day        | LeftArm | RightArm | LeftLeg | RightLeg | Shoulder | Chest | Belly | BellyPlus5 | BellyMinus5 | Hip |
+          | 25.09.2022 | 33      | 34.5     | 57      | 59       | 118      | 104   | 94.5  | 90         | 94.5        | 97  |

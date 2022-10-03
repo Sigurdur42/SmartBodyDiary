@@ -17,6 +17,8 @@ public static class StepExtensions
 
     public static decimal ToDecimalDE(this string input)
         => decimal.Parse(input, German);
+    public static decimal ToInvariantDE(this string input)
+        => decimal.Parse(input, CultureInfo.InvariantCulture);
 
     public static void FillFromReflection(this IDateRecord record, Table table)
     {
