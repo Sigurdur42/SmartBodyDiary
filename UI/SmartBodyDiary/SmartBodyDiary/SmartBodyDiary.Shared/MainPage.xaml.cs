@@ -22,9 +22,21 @@ namespace SmartBodyDiary
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private readonly MainViewModel _viewModel = new();
+        public MainViewModel ViewModel => _viewModel;
         public MainPage()
         {
             this.InitializeComponent();
+
+            this.DataContext = this;
+        }
+
+        private void rootNavigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            var item = args.SelectedItem as NavigationViewItem;
+            _viewModel.SelectedPageName = item?.Name;
+
+            testTextBox.Text = _viewModel.SelectedPageName;
         }
     }
 }
