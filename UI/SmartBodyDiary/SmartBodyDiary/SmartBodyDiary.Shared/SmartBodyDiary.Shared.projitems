@@ -25,6 +25,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)OverviewPage.xaml.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)SettingsPage.xaml.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)SettingsViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="$(MSBuildThisFileDirectory)DatabasePage.xaml">

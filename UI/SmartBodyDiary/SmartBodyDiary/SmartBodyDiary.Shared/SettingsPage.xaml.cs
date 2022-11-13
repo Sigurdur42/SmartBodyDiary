@@ -22,9 +22,13 @@ namespace SmartBodyDiary
     /// </summary>
     public sealed partial class SettingsPage : Page
     {
+        private readonly SettingsViewModel _viewModel;
         public SettingsPage()
         {
             this.InitializeComponent();
+            _viewModel = new();
+
+            rootControl.DataContext = _viewModel;
         }
     }
 }

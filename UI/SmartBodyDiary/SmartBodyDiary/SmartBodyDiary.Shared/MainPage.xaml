@@ -23,11 +23,6 @@
             <NavigationViewItem Content="Database" Tag="SmartBodyDiary.DatabasePage" />
         </NavigationView.MenuItems>
 
-        <NavigationView.FooterMenuItems>
-            <NavigationViewItem Content="Footer 1" />
-            <NavigationViewItem Content="Settings" Tag="SmartBodyDiary.SettingsPage" />
-        </NavigationView.FooterMenuItems>
-
         <NavigationView.Content>
             <StackPanel>
                 <TextBlock Text="Content line 1" />
