@@ -8,38 +8,42 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     mc:Ignorable="d">
 
-    <!--<TabView
-        HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch"
-        CanDrag="false"
-        CanDragTabs="false"
-        CanReorderTabs="false"
-        IsAddTabButtonVisible="false">
-        <TabViewItem Header="Overview" IsClosable="false" />
-        <TabViewItem Header="Data" IsClosable="false" />
-    </TabView>-->
-
     <NavigationView
-        x:Name="rootNavigation"
+        x:Name="NavigationView"
         Header="View header"
         IsBackButtonVisible="Collapsed"
         IsBackEnabled="false"
         IsSettingsVisible="true"
         SelectionChanged="rootNavigation_SelectionChanged">
         <NavigationView.MenuItems>
-            <NavigationViewItem x:Name="Header1" Content="Header1" />
-            <NavigationViewItem x:Name="Header2" Content="Header2" />
+            <NavigationViewItem
+                x:Name="OverviewPage"
+                Content="Overview"
+                Tag="SmartBodyDiary.OverviewPage" />
+            <NavigationViewItem Content="Database" Tag="SmartBodyDiary.DatabasePage" />
         </NavigationView.MenuItems>
 
         <NavigationView.FooterMenuItems>
-            <NavigationViewItem x:Name="Footer1" Content="Footer 1" />
-            <NavigationViewItem x:Name="Footer2" Content="Footer 2" />
+            <NavigationViewItem Content="Footer 1" />
+            <NavigationViewItem Content="Settings" Tag="SmartBodyDiary.SettingsPage" />
         </NavigationView.FooterMenuItems>
 
         <NavigationView.Content>
             <StackPanel>
                 <TextBlock Text="Content line 1" />
-                <TextBlock MinWidth="100" x:Name="testTextBox" />
+                <TextBlock x:Name="testTextBox" MinWidth="100" />
+
+                <Frame x:Name="ContentFrame" Padding="16,0,16,16">
+                    <Frame.ContentTransitions>
+                        <TransitionCollection>
+                            <NavigationThemeTransition>
+                                <NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                                    <DrillInNavigationTransitionInfo />
+                                </NavigationThemeTransition.DefaultNavigationTransitionInfo>
+                            </NavigationThemeTransition>
+                        </TransitionCollection>
+                    </Frame.ContentTransitions>
+                </Frame>
             </StackPanel>
         </NavigationView.Content>
     </NavigationView>

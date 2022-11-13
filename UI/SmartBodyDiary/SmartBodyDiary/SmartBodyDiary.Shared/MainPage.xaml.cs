@@ -29,14 +29,40 @@ namespace SmartBodyDiary
             this.InitializeComponent();
 
             this.DataContext = this;
+            SetCurrentNavigationViewItem(OverviewPage);
         }
 
         private void rootNavigation_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
-            var item = args.SelectedItem as NavigationViewItem;
-            _viewModel.SelectedPageName = item?.Name;
+            //var item = args.SelectedItem as NavigationViewItem;
+            //_viewModel.SelectedPageName = item?.Name;
 
-            testTextBox.Text = _viewModel.SelectedPageName;
+            //testTextBox.Text = _viewModel.SelectedPageName;
+
+            SetCurrentNavigationViewItem(args.SelectedItemContainer as NavigationViewItem);
+        }
+
+        public void SetCurrentNavigationViewItem(NavigationViewItem item)
+        {
+            // TODO: Handle Settings
+            if (item == null)
+            {
+                return;
+            }
+
+            if (item.Tag == null)
+            {
+                return;
+            }
+
+            if (item.Tag.Equals("Settings"))
+            {
+                item.Tag = "SmartBodyDiary.SettingsPage";
+            }
+
+            ContentFrame.Navigate(Type.GetType(item.Tag.ToString()), item.Content);
+            NavigationView.Header = item.Content;
+            NavigationView.SelectedItem = item;
         }
     }
 }
