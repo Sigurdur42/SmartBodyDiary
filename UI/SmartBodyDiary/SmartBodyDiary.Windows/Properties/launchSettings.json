@@ -1,7 +1,0 @@
-{
-  "profiles": {
-    "SmartBodyDiary.Windows": {
-      "commandName": "MsixPackage"
-    }
-  }
-}
