@@ -1,6 +1,4 @@
 ﻿using FluentAssertions;
-using NUnit.Framework;
-using SmartBodyDiaryDomain;
 using SmartBodyDiaryDomain.Import;
 using SmartBodyDomain.Tests.Steps;
 
@@ -47,10 +45,6 @@ public class ImportFitAndLiftSteps
                 goalRecord.Sleep.Should().Be(expectedSleep.ToGoal(), $"Day: {date} Sleep");
                 goalRecord.Protein.Should().Be(expectedProtein.ToGoal(), $"Day: {date} Protein");
             }
-
-            // TODO: body weight
-            // TODO: Challenge
-            // TODO: Settings
         }
     }
 
@@ -103,7 +97,7 @@ public class ImportFitAndLiftSteps
             var expectedBellyPlus5 = row["BellyPlus5"];
             var expectedBellyMinus5 = row["BellyMinus5"];
             var expectedHip = row["Hip"];
-            
+
             var date = row["Day"].ToDateOnlyDE();
 
             var body = _context.FitAndLiftImportResult.BodyData.FindByDate(date, true);

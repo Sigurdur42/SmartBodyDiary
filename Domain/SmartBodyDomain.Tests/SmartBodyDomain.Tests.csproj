@@ -28,6 +28,9 @@
       <None Update="TestData\FitAndLift.2022-09-29.yaml">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="TestData\FitAndLift.2022-11-22.yaml">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

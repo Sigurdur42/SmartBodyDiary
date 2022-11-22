@@ -25,7 +25,7 @@ public class FitAndLiftImport
     {
         var result = new ImportResult();
 
-        var deserializer = new YamlDotNet.Serialization.DeserializerBuilder()
+        var deserializer = new YamlDotNet.Serialization.DeserializerBuilder()            
             .WithNamingConvention(CamelCaseNamingConvention.Instance)
             .IgnoreUnmatchedProperties()
             .Build();
@@ -186,7 +186,8 @@ public class FitAndLiftImport
                 {
                     if (!string.IsNullOrWhiteSpace(Weight))
                     {
-                        _weight = decimal.Parse(Weight, _german);
+                        // _weight = decimal.Parse(Weight, _german);
+                        _weight = decimal.Parse(Weight, CultureInfo.InvariantCulture);
                     }
 
                     _parsedDecimal = true;
