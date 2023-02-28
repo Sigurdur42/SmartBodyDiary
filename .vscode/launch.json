@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/SmartBodyDiaryDomainTests/bin/Debug/net7.0/SmartBodyDiaryDomainTests.dll",
+            "program": "${workspaceFolder}/SmartBodyDiary/bin/Debug/net7.0/SmartBodyDiary.exe",
             "args": [],
-            "cwd": "${workspaceFolder}/SmartBodyDiaryDomainTests",
+            "cwd": "${workspaceFolder}/SmartBodyDiary",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
