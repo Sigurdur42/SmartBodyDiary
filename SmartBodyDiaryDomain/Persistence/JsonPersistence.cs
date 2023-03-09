@@ -2,7 +2,13 @@
 
 namespace SmartBodyDiaryDomain;
 
-public static class JsonPersistence
+public interface IJsonPersistence
+{
+    PersistenceContainer? Deserialize(string serializedJson);
+    string Serialize(PersistenceContainer dataToBeSerialized);
+}
+
+public sealed class JsonPersistence : IJsonPersistence
 {
     private static readonly JsonSerializerOptions _options = new();
 
@@ -17,9 +23,9 @@ public static class JsonPersistence
         set => _options.WriteIndented = value;
     }
 
-    public static string Serialize(PersistenceContainer dataToBeSerialized)
+    public string Serialize(PersistenceContainer dataToBeSerialized)
         => JsonSerializer.Serialize(dataToBeSerialized, _options);
 
-    public static PersistenceContainer? Deserialize(string serializedJson)
+    public PersistenceContainer? Deserialize(string serializedJson)
         => JsonSerializer.Deserialize<PersistenceContainer>(serializedJson, _options);
 }
